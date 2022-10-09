@@ -1,0 +1,26 @@
+.footer {
+  width: 100%;
+  height: 209px;
+  color: $text-color-primary;
+  background-color: $back-ground-color-secondery;
+  position: relative;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   align-items: center;
+  //   text-align: center;
+}
+.footer_text {
+  position: absolute;
+  left: 32.15%;
+  right: 32.22%;
+  top: 64.11%;
+  bottom: 13.88%;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+}
+.footer_logo {
+  color: $text-color-primary;
+  align-items: center;
+}

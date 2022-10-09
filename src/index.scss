@@ -1,1 +1,12 @@
 //Imports de Sass
+@import "./utils/variables.scss";
+@import "./utils/mixins.scss";
+@import "./base/index.css";
+@import "./pages/Home/home.scss";
+@import "./layout/Header/header.scss";
+@import "./components/Logo/logo.scss";
+@import "./pages/Error/error.scss";
+@import "./components/Section/section.scss";
+@import "./layout/Footer/footer.scss";
+@import "./layout/Gallery/gallery.scss";
+@import "./layout/Body/body";

@@ -1,0 +1,45 @@
+.App-header {
+  // min-height: 100vh;
+  width: 1240px;
+  height: 68px;
+  left: 100px;
+  top: 40px;
+  color: #ff6060;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  //   font-size: calc(10px + 2vmin);
+}
+ul {
+  // @include flex_row;
+  display: flex;
+  flex-direction: row;
+}
+li {
+  list-style-type: none;
+}
+a {
+  color: $text-color-base;
+  height: 34px;
+  left: 931px;
+  top: 17px;
+  // border-radius: nullpx;
+  display: flex;
+  align-items: flex-end;
+  text-align: right;
+  text-decoration: none;
+}
+.accueil {
+  width: 136px;
+}
+.about {
+  width: 116px;
+}
+.nav-active {
+  border-bottom: 3px solid $back-ground-color-base;
+}
+// .no-focus {
+//   border-bottom: 3px solid transparent;
+// }
