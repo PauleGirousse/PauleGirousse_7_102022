@@ -3,18 +3,21 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-}
+  line-height: 142.6%;
 
-.error-number {
-  font-weight: 700;
-  font-size: 288px;
-}
-.notFound {
-  font-weight: 500;
-  font-size: 36px;
-}
-.return {
-  font-weight: 500;
-  font-size: 18px;
-  text-decoration-line: underline;
+  .error-number {
+    width: 597px;
+    height: 263px;
+    font-weight: 700;
+    font-size: 288px;
+  }
+  .notFound {
+    font-weight: 500;
+    font-size: 36px;
+  }
+  .return {
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration-line: underline;
+  }
 }

@@ -1,15 +1,12 @@
-import React from "react";
-import Section from "../../components/Section/section";
-import Gallery from "../../layout/Gallery/gallery";
-import Body from "../../layout/Body/body";
+import React from 'react';
+import Section from '../../components/Section/section';
+import Gallery from '../../layout/Gallery/gallery';
 
 export default function Home() {
   return (
-    <div>
-      <Body>
-        <Section />
-        <Gallery />
-      </Body>
+    <div className="body">
+      <Section />
+      <Gallery />
     </div>
   );
 }

@@ -1,9 +1,11 @@
-import React from "react";
+import React from 'react';
+
+import img from '../assets/images/IMGabout.png';
 
 export default function About() {
   return (
     <div>
-      <h1>Voici la page d'A propos</h1>
+      <img src={img} alt="paysage"></img>
     </div>
   );
 }

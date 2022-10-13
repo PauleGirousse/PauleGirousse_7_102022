@@ -1,24 +1,24 @@
-import { NavLink } from "react-router-dom";
-import Logo from "../../components/Logo/logo";
+import { NavLink } from 'react-router-dom';
+import Logo from '../../components/Logo/logo';
 
 export default function Header() {
   return (
-    <div className="App-header">
+    <div className="header">
       <Logo />
       <nav>
         <ul>
-          <li>
+          <li className="home">
             <NavLink
               to="/"
-              className={(nav) => (nav.isActive ? "nav-active" : "")}
+              className={({ isActive }) => (isActive ? 'activeLink' : 'a')}
             >
               Accueil
             </NavLink>
           </li>
-          <li>
+          <li className="about">
             <NavLink
               to="/About"
-              className={(nav) => (nav.isActive ? "nav-active" : "")}
+              className={({ isActive }) => (isActive ? 'activeLink' : 'a')}
             >
               A Propos
             </NavLink>
