@@ -15,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<Apropos />} />
         <Route path="*" element={<Error />} />
+        {/* </Route> */}
       </Routes>
       <Footer />
 
@@ -37,3 +38,9 @@ function App() {
 }
 
 export default App;
+
+// <Route path="/" element={<Root />}>
+// <Route path="Home" element={<Home />} />
+// <Route path="About" element={<Apropos />} />
+// <Route path="*" element={<Error />} />
+// </Route>

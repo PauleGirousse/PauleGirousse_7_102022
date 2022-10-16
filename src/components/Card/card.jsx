@@ -1,26 +1,32 @@
 import React, { useEffect, useState } from 'react';
+import Fiche_logement from '../../pages/Fiche_Logement';
 
 function Card() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch('../../../public/datas/logements.json')
+    fetch('datas/logements.json', {
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+    })
       .then((response) => {
-        return response.JSON();
+        return response.json();
       })
       .then((data) => {
         setItems(data);
       });
   }, []);
   return (
-    <div>
+    <a href={Fiche_logement} className="cards">
       {items.map((card) => (
-        <div className="card">
-          <h2>{card.title}</h2>
+        <figure>
           <img src={card.cover} alt="appartement "></img>
-        </div>
+          <figcaption>{card.title}</figcaption>
+        </figure>
       ))}
-    </div>
+    </a>
   );
 }
 

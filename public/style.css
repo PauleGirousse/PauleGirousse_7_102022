@@ -28,12 +28,14 @@ code {
     monospace; */
 }
 
-.body {
+main {
   width: 1240px;
   height: 1095px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
-.header {
+header {
   width: 1240px;
   height: 68px;
   margin-left: 100px;
@@ -44,7 +46,7 @@ code {
   align-items: center;
   justify-content: space-between;
 }
-.header ul {
+header ul {
   height: 34px;
   width: 309px;
   margin: 0;
@@ -54,15 +56,15 @@ code {
   justify-content: space-between;
   text-align: end;
 }
-.header li {
+header li {
   height: 34px;
   list-style-type: none;
 }
-.header .home {
+header .home {
   width: 136px;
   border-bottom: 2px solid transparent;
 }
-.header .about {
+header .about {
   width: 116px;
   border-bottom: 2px solid transparent;
 }
@@ -83,50 +85,10 @@ a .home .about {
   width: 116px;
 }
 
-.logos {
+.logo {
   width: 210px;
   height: 68px;
   position: relative;
-}
-
-.logo_k {
-  width: 54.33px;
-  height: 62.26px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-}
-
-.logo_maison {
-  width: 46.04px;
-  height: 53.36px;
-  position: absolute;
-  left: 60.22px;
-  top: 14.64px;
-}
-
-.logo_porte {
-  width: 5.34px;
-  height: 15.75px;
-  position: absolute;
-  left: 91.53px;
-  top: 45.69px;
-}
-
-.logo_s {
-  width: 39.41px;
-  height: 48px;
-  position: absolute;
-  left: 118.79px;
-  top: 14.64px;
-}
-
-.logo_a {
-  width: 40.89px;
-  height: 48.17px;
-  position: absolute;
-  left: 169.44px;
-  top: 14.45px;
 }
 
 .error {
@@ -152,43 +114,41 @@ a .home .about {
   text-decoration-line: underline;
 }
 
-.section {
-  width: 1240px;
+section {
+  width: 100%;
   height: 223px;
-  margin-top: 171px;
-  margin-left: 100px;
+  margin-top: 103px;
   position: relative;
 }
-.section h1 {
+section h1 {
   width: 705px;
   height: 68px;
   font-weight: 500;
   font-size: 48px;
   color: white;
+  margin: auto;
   position: absolute;
   top: 78px;
   left: 273px;
-  margin: 0;
-}
-.section .IMG_home {
-  border-radius: 25px;
+  z-index: 1;
 }
 
-.footer {
+footer {
   width: 100%;
   height: 209px;
   color: white;
   background-color: black;
   position: relative;
+  z-index: 2;
 }
-.footer .footer_text {
+footer .footer_text {
   position: absolute;
   left: 32.15%;
   right: 32.22%;
   top: 64.11%;
   text-align: center;
 }
-.footer .logo--footer {
+footer .logo {
   width: 122px;
   height: 39.44px;
   color: white;
@@ -197,25 +157,71 @@ a .home .about {
   align-items: center;
 }
 
-.gallery {
-  max-width: 1240px;
-  max-height: 829px;
+.cards {
+  width: 1240px;
+  height: 829px;
+  padding-top: 56px;
+  padding-left: 50px;
   border-radius: 25px;
-  margin: auto;
   margin-top: 43px;
-  background: #f7f7f7;
+  padding-bottom: 43px;
+  background-color: #f7f7f7;
+  display: grid;
+  grid-template-columns: 340px 340px 340px;
+  row-gap: 50px;
+  column-gap: 60px;
+  overflow: scroll;
+  cursor: pointer;
 }
 
-.card {
+figure {
   width: 340px;
   height: 340px;
+  margin: 0;
   border-radius: 10px;
+  position: relative;
 }
-.card h2 {
+figure::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+figure img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-size: cover;
+}
+figure figcaption {
   width: 300px;
   height: 52px;
   color: white;
   font-size: 18px;
+  margin-left: 20px;
+  position: absolute;
+  bottom: 20px;
+  z-index: 1;
+}
+
+.section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: black;
+  opacity: 30%;
+  border-radius: 25px;
+}
+.section .IMG_home {
+  border-radius: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */

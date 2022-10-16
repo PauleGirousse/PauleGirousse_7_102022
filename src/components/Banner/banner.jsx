@@ -1,13 +1,11 @@
 import React from 'react';
 import img from '../../assets/images/IMGHome-section.png';
 
-function Section() {
+function Banner() {
   return (
-    <div className="section">
+    <div>
       <img src={img} className="IMG_home" alt="paysage" />
-      <h1>Chez vous, partout et ailleurs</h1>
     </div>
   );
 }
-
-export default Section;
+export default Banner;
