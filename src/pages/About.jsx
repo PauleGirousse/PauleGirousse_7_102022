@@ -1,11 +1,11 @@
 import React from 'react';
-
-import img from '../assets/images/IMGabout.png';
+import Banner from '../components/Banner/banner';
+import Img from '../assets/images/IMG_about-banner.png';
 
 export default function About() {
   return (
-    <div>
-      <img src={img} alt="paysage"></img>
+    <div className="main">
+      <Banner url={Img} />
     </div>
   );
 }

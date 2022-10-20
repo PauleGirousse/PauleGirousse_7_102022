@@ -1,5 +1,6 @@
-import { NavLink } from 'react-router-dom';
+import React from 'react';
 import Logo from '../../components/Logo/logo';
+import { NavLink } from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -7,26 +8,20 @@ export default function Header() {
       <Logo />
       <nav>
         <ul>
-          <li className="home">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive ? 'activeLink' : undefined
-              }
-            >
-              Accueil
-            </NavLink>
-          </li>
-          <li className="about">
-            <NavLink
-              to="/About"
-              className={({ isActive }) =>
-                isActive ? 'activeLink' : undefined
-              }
-            >
-              A Propos
-            </NavLink>
-          </li>
+          <NavLink
+            to="/"
+            // className={({ isActive }) => (isActive ? 'activeLink' : undefined)}
+            className={(nav) => (nav.isActive ? 'nav-active' : '')}
+          >
+            <li>Accueil</li>
+          </NavLink>
+          <NavLink
+            to="/About"
+            // className={({ isActive }) => (isActive ? 'activeLink' : undefined)}
+            className={(nav) => (nav.isActive ? 'nav-active' : '')}
+          >
+            <li>A Propos</li>
+          </NavLink>
         </ul>
       </nav>
     </header>

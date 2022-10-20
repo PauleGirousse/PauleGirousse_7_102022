@@ -5,12 +5,6 @@ footer {
   background-color: $back-ground-color-secondery;
   position: relative;
   z-index: 2;
-
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   align-items: center;
-  //   text-align: center;
   .footer_text {
     position: absolute;
     left: 32.15%;
@@ -18,12 +12,9 @@ footer {
     top: 64.11%;
     text-align: center;
   }
-  .logo {
-    width: 122px;
-    height: 39.44px;
-    color: $text-color-primary;
+  .logo_footer {
     position: absolute;
+    top: 66px;
     left: 659px;
-    align-items: center;
   }
 }

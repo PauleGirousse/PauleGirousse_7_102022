@@ -34,10 +34,6 @@ header {
   }
 }
 
-.activeLink {
-  border-bottom: 2px solid $back-ground-color-base;
-}
-
 a {
   color: $text-color-base;
   border-bottom: 2px solid transparent;
@@ -50,6 +46,13 @@ a {
     }
   }
 }
-// .no-focus {
-//   border-bottom: 3px solid transparent;
+// .activeLink {
+//   border-bottom: 2px solid $back-ground-color-base;
 // }
+
+.nav-active {
+  position: relative;
+  border-bottom: 2px solid $back-ground-color-base;
+}
+@include mobile {
+}

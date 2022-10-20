@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Fiche_logement from '../../pages/Fiche_Logement';
 
 function Card() {
@@ -19,14 +20,14 @@ function Card() {
       });
   }, []);
   return (
-    <a href={Fiche_logement} className="cards">
+    <Link to={Fiche_logement} className="cards">
       {items.map((card) => (
         <figure>
           <img src={card.cover} alt="appartement "></img>
           <figcaption>{card.title}</figcaption>
         </figure>
       ))}
-    </a>
+    </Link>
   );
 }
 

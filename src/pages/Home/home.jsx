@@ -4,9 +4,9 @@ import Gallery from '../../layout/Gallery/gallery';
 
 export default function Home() {
   return (
-    <main>
+    <div className="main">
       <Section />
       <Gallery />
-    </main>
+    </div>
   );
 }
