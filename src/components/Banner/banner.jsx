@@ -2,8 +2,8 @@ import React from 'react';
 
 function Banner(props) {
   return (
-    <div>
-      <img src={props.url} className="image" alt="paysage" />
+    <div className="banner">
+      <img src={props.url} alt="paysage" />
     </div>
   );
 }

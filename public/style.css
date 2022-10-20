@@ -114,13 +114,10 @@ a .home .about {
   text-decoration-line: underline;
 }
 
-section {
-  width: 100%;
-  height: 223px;
-  margin-top: 103px;
+.sct {
   position: relative;
 }
-section h1 {
+.sct h1 {
   width: 705px;
   height: 68px;
   font-weight: 500;
@@ -205,7 +202,13 @@ figure figcaption {
   z-index: 1;
 }
 
-.section::after {
+.banner {
+  width: 100%;
+  height: 223px;
+  margin-top: 103px;
+  position: relative;
+}
+.banner::after {
   content: "";
   position: absolute;
   left: 0;
@@ -217,7 +220,7 @@ figure figcaption {
   opacity: 30%;
   border-radius: 25px;
 }
-.section .image {
+.banner img {
   border-radius: 25px;
 }
 
