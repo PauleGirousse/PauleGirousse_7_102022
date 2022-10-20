@@ -1,0 +1,31 @@
+.accordions {
+  margin-top: 33px;
+  margin-left: 108px;
+  .accordion_title {
+    width: 1023px;
+    height: 47px;
+    border-radius: 5px;
+    background-color: $text-color-base;
+    color: $text-color-primary;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 18.08px;
+    padding-right: 16.08px;
+  }
+  .accordion_content {
+    width: 1023px;
+    color: $text-color-base;
+    background-color: $back-ground-color-primary;
+    padding: 36px 27px 19px 18px;
+    border-radius: 5px;
+  }
+  .icon {
+    width: 14.06px;
+    height: 23.86px;
+  }
+  //   .active{
+
+  //   }
+}
