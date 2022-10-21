@@ -76,7 +76,7 @@ a {
 a .home {
   width: 136px;
 }
-a .home .about {
+a .about {
   width: 116px;
 }
 
@@ -137,6 +137,7 @@ footer {
   background-color: black;
   position: relative;
   z-index: 2;
+  margin-top: 46px;
 }
 footer .footer_text {
   position: absolute;
@@ -247,10 +248,6 @@ figure figcaption {
   background-color: #f7f7f7;
   padding: 36px 27px 19px 18px;
   border-radius: 5px;
-}
-.accordions .icon {
-  width: 14.06px;
-  height: 23.86px;
 }
 
 /*# sourceMappingURL=style.css.map */

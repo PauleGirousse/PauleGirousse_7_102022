@@ -4,7 +4,7 @@ import Gallery from '../../layout/Gallery/gallery';
 
 export default function Home() {
   return (
-    <div className="main">
+    <div className="main element">
       <Section />
       <Gallery />
     </div>

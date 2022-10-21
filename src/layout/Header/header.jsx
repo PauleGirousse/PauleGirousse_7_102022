@@ -27,3 +27,27 @@ export default function Header() {
     </header>
   );
 }
+
+// const Header = () => {
+//   const navLinkStyles = ({ isActive }) => {
+//     return {
+//       fontweight: isActive ? 'bold' : 'normal',
+//       textDecoration: isActive ? 'underline' : 'none',
+//     };
+//   };
+//   return (
+//     <header>
+//       <Logo />
+//       <nav>
+//         <NavLink style={navLinkStyles} to="/">
+//           Accueil
+//         </NavLink>
+//         <NavLink style={navLinkStyles} to="/about">
+//           A propos
+//         </NavLink>
+//       </nav>
+//       <Outlet />
+//     </header>
+//   );
+// };
+// export default Header;

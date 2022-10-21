@@ -40,10 +40,9 @@ a {
   text-decoration: none;
   .home {
     width: 136px;
-
-    .about {
-      width: 116px;
-    }
+  }
+  .about {
+    width: 116px;
   }
 }
 // .activeLink {
@@ -54,5 +53,5 @@ a {
   position: relative;
   border-bottom: 2px solid $back-ground-color-base;
 }
-@include mobile {
-}
+// @include mobile {
+// }
