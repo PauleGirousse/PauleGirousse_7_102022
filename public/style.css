@@ -10,7 +10,7 @@ html {
 
 body {
   max-width: 1440px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-size: 24px;
   font-family: "Montserrat", sans-serif;
@@ -25,13 +25,6 @@ code {
   font-family: "Montserrat", sans-serif;
   /* font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace; */
-}
-
-.main {
-  width: 1240px;
-  height: 1095px;
-  margin-left: 100px;
-  margin-right: 100px;
 }
 
 header {
@@ -61,11 +54,9 @@ header li {
 }
 header .home {
   width: 136px;
-  border-bottom: 2px solid transparent;
 }
 header .about {
   width: 116px;
-  border-bottom: 2px solid transparent;
 }
 
 a {
@@ -82,7 +73,14 @@ a .about {
 
 .nav-active {
   position: relative;
-  border-bottom: 2px solid #ff6060;
+  text-decoration: underline;
+}
+
+.main {
+  width: 1240px;
+  max-height: 1095px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .logo {
@@ -97,6 +95,7 @@ a .about {
   align-items: center;
   text-align: center;
   line-height: 142.6%;
+  color: #ff6060;
 }
 .error .error-number {
   width: 597px;

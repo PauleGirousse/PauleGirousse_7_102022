@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Fiche_logement from '../../pages/Fiche_Logement';
+import HouseIndexCard from '../../pages/HouseIndexCard';
 
 function Card() {
   const [items, setItems] = useState([]);
@@ -20,7 +20,7 @@ function Card() {
       });
   }, []);
   return (
-    <Link to={Fiche_logement} className="cards">
+    <Link to={HouseIndexCard} className="cards">
       {items.map((card) => (
         <figure>
           <img src={card.cover} alt="appartement "></img>

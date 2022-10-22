@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../../components/Logo/logo';
+import Logo from '../src/components/Logo/logo';
 import { NavLink } from 'react-router-dom';
 
 export default function Header() {

@@ -2,8 +2,9 @@
 @import './utils/variables';
 @import './utils/mixins';
 @import './base/index';
+@import './pages/Layout/layout';
 @import './pages/Home/home';
-@import './layout/Header/header';
+// @import './layout/Header/header';
 @import './components/Logo/logo';
 @import './pages/Error/error';
 @import './layout/Section/section';
