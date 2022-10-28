@@ -4,12 +4,15 @@
 @import './base/index';
 @import './pages/Layout/layout';
 @import './pages/Home/home';
-// @import './layout/Header/header';
+@import './layout/Carousel//carousel';
 @import './components/Logo/logo';
 @import './pages/Error/error';
 @import './layout/Section/section';
 @import './layout/Footer/footer';
-@import './layout/Gallery/gallery';
-@import './components/Card/card';
+// @import './layout/Gallery/gallery';
+@import './layout/Cards/cards';
+// @import './components/Card/card';
 @import './components/Banner/banner';
 @import './components/Accordion/accordion';
+// @import './layout//Title/title';
+@import './pages/singleCard';

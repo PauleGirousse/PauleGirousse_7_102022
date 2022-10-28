@@ -1,11 +1,9 @@
 import React from 'react';
 import logo_blanc from '../../assets/logo/LOGO-blanc.svg';
-// import Logo from '../../components/Logo/logo';
 
-export default function footer() {
+export default function Footer() {
   return (
     <footer>
-      {/* <Logo /> */}
       <div>
         <img src={logo_blanc} className="logo_footer" alt="paysage" />
       </div>

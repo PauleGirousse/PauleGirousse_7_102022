@@ -1,6 +1,7 @@
 import { Outlet, NavLink } from 'react-router-dom';
 import Logo from '../../components/Logo/logo';
 import { useLocation } from 'react-router-dom';
+import Footer from '../../layout/Footer/Footer';
 
 const Layout = () => {
   const location = useLocation();
@@ -33,6 +34,7 @@ const Layout = () => {
         </nav>
       </header>
       <Outlet />
+      <Footer />
     </div>
   );
 };

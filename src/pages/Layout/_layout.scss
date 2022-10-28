@@ -30,17 +30,11 @@ header {
   .about {
     width: 116px;
   }
-}
 
-a {
-  color: $text-color-base;
-  border-bottom: 2px solid transparent;
-  text-decoration: none;
-  .home {
-    width: 136px;
-  }
-  .about {
-    width: 116px;
+  a {
+    color: $text-color-base;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
   }
 }
 // .activeLink {
