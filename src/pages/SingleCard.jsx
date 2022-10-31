@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 // import { Cardtype } from '../layout/Cards/cards';
 import Carousel from '../layout/Carousel/carousel';
-// import Title from '../layout/Title/title';
+import Title from '../layout/Title/title';
 // import { baseURL } from 'datas/logements.json';
 
 // import Accordion from '../components/Accordion/accordion';
 import Star from '../assets/logo/star.svg';
+import Accordion from '../components/Accordion/accordion';
 
 function SingleCard() {
   const location = useLocation();
@@ -32,61 +33,63 @@ function SingleCard() {
         console.log(data);
       });
   }, []);
-  const foundCard = items.find((card) => card.id === params.id);
+  const foundCard = items.filter((card) => card.id === params.id);
   console.log(foundCard);
+
   return (
-    // <div>
-    //   {foundCard.map(
-    //     ({
-    //       title,
-    //       pictures,
-    //       description,
-    //       host,
-    //       rating,
-    //       location,
-    //       equipments,
-    //       tag,
-    //     }) => (
     <div>
-      <Carousel />
-      {/* <Title /> */}
-      <section className="details">
-        <div className="container_title">
-          <div className="title">Cosy loft on the Canal Saint-Martin</div>
-          <div className="location">{location}Paris, Ile de France</div>
-          <div className="container_tags">
-            <div className="tag">
-              <span>Cosy</span>
+      {foundCard &&
+        foundCard.map(
+          ({
+            title,
+            pictures,
+            description,
+            host,
+            rating,
+            location,
+            equipments,
+            tag,
+          }) => (
+            <div className="main">
+              <Carousel pictures={pictures} />
+              <Title title={title} location={location} />
+              <section className="details">
+                <div className="container_tags">
+                  <div className="tag">
+                    <span>Cosy</span>
+                  </div>
+                  <div className="tag">
+                    <span>Canal</span>
+                  </div>
+                  <div className="tag">
+                    <span>Paris 10</span>
+                  </div>
+                </div>
+                <div className="container_icons">
+                  <div className="host">
+                    <div className="name">
+                      <span>Alexandre Dumas</span>
+                    </div>
+                    <div className="circle"></div>
+                  </div>
+                  <div className="stars">
+                    <img src={Star} alt="étoile" className="star"></img>
+                    <img src={Star} alt="étoile" className="star"></img>
+                    <img src={Star} alt="étoile" className="star"></img>
+                    <img src={Star} alt="étoile" className="star"></img>
+                    <img src={Star} alt="étoile" className="star"></img>
+                  </div>
+                </div>
+              </section>
+              <div className="container_accordion">
+                <Accordion content={description} />
+                <Accordion content={equipments} />
+              </div>
             </div>
-            <div className="tag">
-              <span>Canal</span>
-            </div>
-            <div className="tag">
-              <span>Paris 10</span>
-            </div>
-          </div>
-        </div>
-        <div className="container_icons">
-          <div className="host">
-            <div className="name">
-              <span>Alexandre Dumas</span>
-            </div>
-            <div className="circle"></div>
-          </div>
-          <div className="stars">
-            <img src={Star} alt="étoile" className="star"></img>
-            <img src={Star} alt="étoile" className="star"></img>
-            <img src={Star} alt="étoile" className="star"></img>
-            <img src={Star} alt="étoile" className="star"></img>
-            <img src={Star} alt="étoile" className="star"></img>
-          </div>
-        </div>
-      </section>
+          )
+        )}
     </div>
   );
-  //   )}
-  // </div>
-  // );
 }
 
 export default SingleCard;
@@ -174,3 +177,7 @@ export default SingleCard;
 //   tags: [foundCard.tags],
 // };
 // console.log(card.title);
+
+// {/* <div className="container_title">
+//   <div className="title">{title}</div>
+//   <div className="location">{location}</div> */}

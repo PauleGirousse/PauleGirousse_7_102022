@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import open_icon from '../../assets/logo/up.svg';
-import closed_icon from '../../assets/logo/down.svg';
+import Open_icon from '../../assets/logo/up.svg';
+import Closed_icon from '../../assets/logo/down.svg';
 
 const Accordion = ({ title, content }) => {
   const [isActive, setIsActive] = useState(false);
@@ -12,9 +12,9 @@ const Accordion = ({ title, content }) => {
         <div>{title}</div>
         <div>
           {isActive ? (
-            <img clasName="icon" src={open_icon} alt="chevron ouvrant" />
+            <img clasName="icon" src={Open_icon} alt="chevron ouvrant" />
           ) : (
-            <img className="icon" src={closed_icon} alt="chevron fermant" />
+            <img className="icon" src={Closed_icon} alt="chevron fermant" />
           )}
         </div>
       </div>

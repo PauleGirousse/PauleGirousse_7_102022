@@ -1,13 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { LeftArrow } from '../../assets/logo/leftArrow.svg';
+import { RightArrow } from '../../assets/logo/rightArrow.svg';
 
 function Carousel(props) {
-  // const slides = [props.pictures];
+  const slides = [props.pictures];
+  // initialisation à l'index 0 des url
+  const [current, setCurrent] = useState(0);
+  const length = slides.length;
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
+  console.log(current);
+  if (!Array.isArray(slides) || slides.length <= 0) {
+    return null;
+  }
+
   return (
-    <div>
-      {/* {items.map((pictures, index) => (
-        <img src={pictures.pictures} alt="logement"></img>
-      ))} */}
-    </div>
+    <section className="picture">
+      <img
+        src={LeftArrow}
+        alt="flèche gauche"
+        className="left-arrow"
+        onClick={prevSlide}
+      />
+      <img
+        src={RightArrow}
+        alt="flèche droite"
+        className="right-arrow"
+        onClick={nextSlide}
+      />
+      {slides.map((slide) => {
+        return <img src={slide.index} alt="logement" className="image" />;
+      })}
+    </section>
   );
 }
 
@@ -29,3 +57,7 @@ export default Carousel;
 //         setItems(data);
 //       });
 //   }, []);
+
+// {/* {items.map((pictures, index) => (
+//   <img src={pictures.pictures} alt="logement"></img>
+// ))} */}
