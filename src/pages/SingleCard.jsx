@@ -50,7 +50,7 @@ function SingleCard() {
             equipments,
             tag,
           }) => (
-            <div className="main">
+            <div className="main" key={foundCard.id}>
               <Carousel pictures={pictures} />
               <Title title={title} location={location} />
               <section className="details">

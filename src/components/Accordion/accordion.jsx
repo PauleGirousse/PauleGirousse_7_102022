@@ -12,7 +12,7 @@ const Accordion = ({ title, content }) => {
         <div>{title}</div>
         <div>
           {isActive ? (
-            <img clasName="icon" src={Open_icon} alt="chevron ouvrant" />
+            <img className="icon" src={Open_icon} alt="chevron ouvrant" />
           ) : (
             <img className="icon" src={Closed_icon} alt="chevron fermant" />
           )}

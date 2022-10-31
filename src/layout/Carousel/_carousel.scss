@@ -1,0 +1,13 @@
+.picture {
+  position: relative;
+  .left-arrow {
+    position: absolute;
+    top: 450px;
+    left: 23px;
+  }
+  .right-arrow {
+    position: absolute;
+    top: 450px;
+    right: 23px;
+  }
+}

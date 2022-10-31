@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { LeftArrow } from '../../assets/logo/leftArrow.svg';
-import { RightArrow } from '../../assets/logo/rightArrow.svg';
+import LeftArrow from '../../assets/logo/leftArrow.svg';
+import RightArrow from '../../assets/logo/rightArrow.svg';
 
 function Carousel(props) {
-  const slides = [props.pictures];
+  const slides = props.pictures;
   // initialisation à l'index 0 des url
   const [current, setCurrent] = useState(0);
   const length = slides.length;
@@ -32,9 +32,7 @@ function Carousel(props) {
         className="right-arrow"
         onClick={nextSlide}
       />
-      {slides.map((slide) => {
-        return <img src={slide.index} alt="logement" className="image" />;
-      })}
+      <img src={slides[current]} alt="logement" className="image" />;
     </section>
   );
 }
