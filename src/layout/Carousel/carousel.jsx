@@ -32,7 +32,7 @@ function Carousel(props) {
         className="right-arrow"
         onClick={nextSlide}
       />
-      <img src={slides[current]} alt="logement" className="image" />;
+      <img src={slides[current]} alt="logement" className="image" />
     </section>
   );
 }

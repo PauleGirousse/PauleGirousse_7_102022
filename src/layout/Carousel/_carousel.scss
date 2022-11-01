@@ -1,13 +1,21 @@
 .picture {
   position: relative;
+  width: 1240px;
+  height: 415px;
+  margin-top: 25px;
   .left-arrow {
     position: absolute;
-    top: 450px;
+    top: 35%;
     left: 23px;
   }
   .right-arrow {
     position: absolute;
-    top: 450px;
+    top: 35%;
     right: 23px;
+  }
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }

@@ -51,9 +51,15 @@ function SingleCard() {
             tag,
           }) => (
             <div className="main" key={foundCard.id}>
-              <Carousel pictures={pictures} />
-              <Title title={title} location={location} />
+              <Carousel key={foundCard.id} pictures={pictures} />
               <section className="details">
+                <Title key={foundCard.id} title={title} location={location} />
+                <div className="container_host">
+                  <div className="name">
+                    <span>{host.name}</span>
+                  </div>
+                  <div className="circle"></div>
+                </div>
                 <div className="container_tags">
                   <div className="tag">
                     <span>Cosy</span>
@@ -65,25 +71,29 @@ function SingleCard() {
                     <span>Paris 10</span>
                   </div>
                 </div>
-                <div className="container_icons">
-                  <div className="host">
-                    <div className="name">
-                      <span>Alexandre Dumas</span>
-                    </div>
-                    <div className="circle"></div>
-                  </div>
-                  <div className="stars">
-                    <img src={Star} alt="étoile" className="star"></img>
-                    <img src={Star} alt="étoile" className="star"></img>
-                    <img src={Star} alt="étoile" className="star"></img>
-                    <img src={Star} alt="étoile" className="star"></img>
-                    <img src={Star} alt="étoile" className="star"></img>
-                  </div>
+
+                <div className="stars">
+                  <img src={Star} alt="étoile" className="star"></img>
+                  <img src={Star} alt="étoile" className="star"></img>
+                  <img src={Star} alt="étoile" className="star"></img>
+                  <img src={Star} alt="étoile" className="star"></img>
+                  <img src={Star} alt="étoile" className="star"></img>
                 </div>
               </section>
               <div className="container_accordion">
-                <Accordion content={description} />
-                <Accordion content={equipments} />
+                <Accordion
+                  key={title}
+                  title="Description"
+                  content={description}
+                />
+                <Accordion
+                  key={title}
+                  title="Equipements"
+                  content={equipments}
+                  // {...equipments.forEach((element) => {
+                  //   <li>{element}</li>;
+                  // })}
+                />
               </div>
             </div>
           )

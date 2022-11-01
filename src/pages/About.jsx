@@ -29,7 +29,7 @@ export default function About() {
   return (
     <div className="main">
       <Banner url={Img} />
-      <div>
+      <div className="container_accordions">
         {accordionData.map(({ title, content }) => (
           <Accordion key={title} title={title} content={content} />
         ))}
