@@ -6,7 +6,7 @@ import Home from './pages/Home/Home';
 import About from './pages/About';
 // import Footer from './layout/Footer/Footer';
 import Error from './pages/Error/Error';
-import SingleCard from './pages/SingleCard';
+import SingleCard from './pages/SingleCard/SingleCard';
 
 function App() {
   return (

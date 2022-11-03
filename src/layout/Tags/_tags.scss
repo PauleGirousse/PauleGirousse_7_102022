@@ -1,0 +1,26 @@
+.container_tags {
+  //   width: 365px;
+  margin-top: 20px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 10px;
+
+  .tag {
+    width: 115px;
+    height: 25px;
+    background-color: $text-color-base;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+
+    span {
+      color: $text-color-primary;
+      height: 20px;
+      font-size: 14px;
+    }
+  }
+}

@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
-// import { Cardtype } from '../layout/Cards/cards';
-import Carousel from '../layout/Carousel/carousel';
-import Title from '../layout/Title/title';
-// import { baseURL } from 'datas/logements.json';
-
-// import Accordion from '../components/Accordion/accordion';
-import Star from '../assets/logo/star.svg';
-import Accordion from '../components/Accordion/accordion';
+import Error from '../Error/Error';
+import Carousel from '../../layout/Carousel/carousel';
+import Title from '../../layout/Title/title';
+import Stars from '../../layout/Stars/stars';
+// import useFetch from '../utils/hooks/useFetch';
+import Accordion from '../../components/Accordion/accordion';
+import Tags from '../../layout/Tags/tags';
 
 function SingleCard() {
   const location = useLocation();
@@ -17,6 +16,9 @@ function SingleCard() {
 
   const [items, setItems] = useState([]);
   useEffect(() => {
+    // const url = '../datas/logements.json';
+    // const { loading, data, error } = useFetch(url, null);
+
     // const singleCardApiUrl = `../datas/logements.json?id=${params.id}`;
 
     fetch('../datas/logements.json', {
@@ -36,6 +38,8 @@ function SingleCard() {
   const foundCard = items.filter((card) => card.id === params.id);
   console.log(foundCard);
 
+  if (!foundCard) return;
+  <Error />;
   return (
     <div>
       {foundCard &&
@@ -48,51 +52,41 @@ function SingleCard() {
             rating,
             location,
             equipments,
-            tag,
+            tags,
           }) => (
             <div className="main" key={foundCard.id}>
               <Carousel key={foundCard.id} pictures={pictures} />
               <section className="details">
-                <Title key={foundCard.id} title={title} location={location} />
+                <Title
+                  key={foundCard.title}
+                  title={title}
+                  location={location}
+                />
                 <div className="container_host">
                   <div className="name">
                     <span>{host.name}</span>
                   </div>
                   <div className="circle"></div>
                 </div>
-                <div className="container_tags">
-                  <div className="tag">
-                    <span>Cosy</span>
-                  </div>
-                  <div className="tag">
-                    <span>Canal</span>
-                  </div>
-                  <div className="tag">
-                    <span>Paris 10</span>
-                  </div>
-                </div>
-
-                <div className="stars">
-                  <img src={Star} alt="étoile" className="star"></img>
-                  <img src={Star} alt="étoile" className="star"></img>
-                  <img src={Star} alt="étoile" className="star"></img>
-                  <img src={Star} alt="étoile" className="star"></img>
-                  <img src={Star} alt="étoile" className="star"></img>
-                </div>
+                <Tags key={foundCard.tags} tags={tags} />
+                <Stars key={foundCard.rating} rating={rating} />
               </section>
               <div className="container_accordion">
                 <Accordion
-                  key={title}
+                  key={foundCard.description}
                   title="Description"
                   content={description}
                 />
                 <Accordion
-                  key={title}
+                  key={foundCard.equipments}
                   title="Equipements"
-                  content={equipments}
-                  // {...equipments.forEach((element) => {
-                  //   <li>{element}</li>;
-                  // })}
+                  content={
+                    <ul>
+                      {equipments.map((item) => (
+                        <li key={equipments.index}>{item}</li>
+                      ))}
+                    </ul>
+                  }
                 />
               </div>
             </div>
@@ -191,3 +185,27 @@ export default SingleCard;
 // {/* <div className="container_title">
 //   <div className="title">{title}</div>
 //   <div className="location">{location}</div> */}
+
+{
+  /* <div className="stars">
+  <img src={Star} alt="étoile" className="star"></img>
+  <img src={Star} alt="étoile" className="star"></img>
+  <img src={Star} alt="étoile" className="star"></img>
+  <img src={Star} alt="étoile" className="star"></img>
+  <img src={Star} alt="étoile" className="star"></img>
+</div> */
+}
+
+{
+  /* <div className="container_tags">
+   <div className="tag">
+    <span>Cosy</span>
+  </div>
+  <div className="tag">
+    <span>Canal</span>
+  </div>
+  <div className="tag">
+    <span>Paris 10</span>
+  </div>
+</div>  */
+}

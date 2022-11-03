@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import LeftArrow from '../../assets/logo/leftArrow.svg';
-import RightArrow from '../../assets/logo/rightArrow.svg';
+import LeftArrow from '../../assets/icons/leftArrow.svg';
+import RightArrow from '../../assets/icons/rightArrow.svg';
 
 function Carousel(props) {
   const slides = props.pictures;

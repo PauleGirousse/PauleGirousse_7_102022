@@ -1,0 +1,10 @@
+.container_stars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .star {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+  }
+}
