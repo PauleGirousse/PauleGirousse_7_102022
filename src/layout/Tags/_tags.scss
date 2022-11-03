@@ -1,5 +1,4 @@
 .container_tags {
-  //   width: 365px;
   margin-top: 20px;
   margin-bottom: 24px;
   display: flex;
@@ -8,7 +7,9 @@
   column-gap: 10px;
 
   .tag {
-    width: 115px;
+    // width: 115px;
+    padding-left: 25px;
+    padding-right: 25px;
     height: 25px;
     background-color: $text-color-base;
     border-radius: 10px;

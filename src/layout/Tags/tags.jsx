@@ -5,7 +5,7 @@ function Tags(props) {
   return (
     <div className="container_tags">
       {tags.map((item) => (
-        <div className="tag" key={tags.index}>
+        <div className="tag" key={item}>
           <span>{item}</span>
         </div>
       ))}
@@ -14,11 +14,3 @@ function Tags(props) {
 }
 
 export default Tags;
-{
-  /* <div className="tag">
-  <span>Canal</span>
-</div>
-<div className="tag">
-  <span>Paris 10</span>
-</div>  */
-}

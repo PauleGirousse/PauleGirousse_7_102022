@@ -4,13 +4,13 @@ import StarGrey from '../../assets/icons/star-grey.svg';
 
 function Stars(props) {
   const rating = props.rating;
-  console.log(rating);
+  console.log(typeof rating);
   const orangeColor = <img src={Star} alt="étoile" className="star"></img>;
   const greyColor = <img src={StarGrey} alt="étoile" className="star"></img>;
 
   function ChoiseColor({ rating }) {
     switch (rating) {
-      case 5:
+      case '5':
         return (
           <div>
             {orangeColor}
@@ -21,7 +21,7 @@ function Stars(props) {
           </div>
         );
 
-      case 4:
+      case '4':
         return (
           <div>
             {orangeColor}
@@ -32,7 +32,8 @@ function Stars(props) {
           </div>
         );
 
-      case 3:
+      case '3':
+        console.log('ici');
         return (
           <div>
             {orangeColor}
@@ -42,7 +43,7 @@ function Stars(props) {
             {greyColor}
           </div>
         );
-      case 2:
+      case '2':
         return (
           <div>
             {orangeColor}
@@ -52,7 +53,7 @@ function Stars(props) {
             {greyColor}
           </div>
         );
-      case 1:
+      case '1':
         return (
           <div>
             {orangeColor}

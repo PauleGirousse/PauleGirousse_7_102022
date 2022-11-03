@@ -20,18 +20,27 @@ function Carousel(props) {
 
   return (
     <section className="picture">
-      <img
-        src={LeftArrow}
-        alt="flèche gauche"
-        className="left-arrow"
-        onClick={prevSlide}
-      />
-      <img
-        src={RightArrow}
-        alt="flèche droite"
-        className="right-arrow"
-        onClick={nextSlide}
-      />
+      <div className="pagination">
+        {current + 1}/{slides.length}
+      </div>
+      {slides.length === 1 ? (
+        ''
+      ) : (
+        <div>
+          <img
+            src={LeftArrow}
+            alt="flèche gauche"
+            className="left-arrow"
+            onClick={prevSlide}
+          />
+          <img
+            src={RightArrow}
+            alt="flèche droite"
+            className="right-arrow"
+            onClick={nextSlide}
+          />
+        </div>
+      )}
       <img src={slides[current]} alt="logement" className="image" />
     </section>
   );

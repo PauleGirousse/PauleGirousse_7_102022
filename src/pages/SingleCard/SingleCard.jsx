@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
-import Error from '../Error/Error';
+// import Error from '../Error/Error';
 import Carousel from '../../layout/Carousel/carousel';
 import Title from '../../layout/Title/title';
 import Stars from '../../layout/Stars/stars';
-// import useFetch from '../utils/hooks/useFetch';
+// import useFetch from '../../utils/hooks/useFetch';
 import Accordion from '../../components/Accordion/accordion';
 import Tags from '../../layout/Tags/tags';
 
@@ -17,9 +17,7 @@ function SingleCard() {
   const [items, setItems] = useState([]);
   useEffect(() => {
     // const url = '../datas/logements.json';
-    // const { loading, data, error } = useFetch(url, null);
-
-    // const singleCardApiUrl = `../datas/logements.json?id=${params.id}`;
+    // const { loading, items, error } = useFetch(url, []);
 
     fetch('../datas/logements.json', {
       headers: {
@@ -39,9 +37,10 @@ function SingleCard() {
   console.log(foundCard);
 
   if (!foundCard) return;
-  <Error />;
   return (
     <div>
+      {/* {error && <Error />}
+      {loading && 'Loading...'} */}
       {foundCard &&
         foundCard.map(
           ({
@@ -68,22 +67,17 @@ function SingleCard() {
                   </div>
                   <div className="circle"></div>
                 </div>
-                <Tags key={foundCard.tags} tags={tags} />
-                <Stars key={foundCard.rating} rating={rating} />
+                <Tags tags={tags} />
+                <Stars rating={rating} />
               </section>
               <div className="container_accordion">
+                <Accordion title="Description" content={description} />
                 <Accordion
-                  key={foundCard.description}
-                  title="Description"
-                  content={description}
-                />
-                <Accordion
-                  key={foundCard.equipments}
                   title="Equipements"
                   content={
                     <ul>
                       {equipments.map((item) => (
-                        <li key={equipments.index}>{item}</li>
+                        <li key={item}>{item}</li>
                       ))}
                     </ul>
                   }
@@ -103,9 +97,7 @@ export default SingleCard;
 //   {items.map((card) => (const [items, setItems] = useState([]);
 //    useEffect(() => {
 //    fetch('datas/logements.json', {
-//        headers: {
-//     'Content-Type': 'application/json',
-//      Accept: 'application/json',
+//        headers: {import useFetch from '../utils/hooks/useFetch';
 //     },
 //   })
 //     .then((response) => {
