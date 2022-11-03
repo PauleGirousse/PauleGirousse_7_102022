@@ -20,13 +20,13 @@ function Carousel(props) {
 
   return (
     <section className="picture">
-      <div className="pagination">
-        {current + 1}/{slides.length}
-      </div>
       {slides.length === 1 ? (
         ''
       ) : (
         <div>
+          <div className="pagination">
+            {current + 1}/{slides.length}
+          </div>
           <img
             src={LeftArrow}
             alt="flèche gauche"

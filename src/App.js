@@ -18,6 +18,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="About" element={<About />} />
           <Route path="house/:id" element={<SingleCard />} />
+          {/* <Route path="house/*" element={<Error />} /> */}
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>
