@@ -1,8 +1,11 @@
 header {
   // min-height: 100vh;
-  width: 1240px;
+
+  max-width: 1240px;
+  min-width: 335px;
   height: 68px;
-  margin-left: 100px;
+  // margin-left: 100px;
+  margin: auto;
   margin-top: 40px;
   color: $text-color-base;
   display: flex;
@@ -11,13 +14,14 @@ header {
   justify-content: space-between;
   ul {
     height: 34px;
-    width: 309px;
+    max-width: 309px;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     text-align: end;
+    column-gap: 57px;
   }
 
   li {
@@ -46,4 +50,24 @@ header {
   text-decoration: underline;
 }
 // @include mobile {
+
 // }
+@include mobile {
+  header {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 12px;
+    ul {
+      column-gap: 10px;
+    }
+  }
+}
+@include breakpoint {
+  header {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  ul {
+    column-gap: 30px;
+  }
+}

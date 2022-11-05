@@ -1,18 +1,31 @@
 .cards {
-  width: 1240px;
+  // width: 1240px;
+  width: 100%;
   height: 829px;
   padding-top: 56px;
   padding-left: 50px;
+  padding-right: 50px;
   border-radius: 25px;
   margin-top: 43px;
   padding-bottom: 43px;
   background-color: $back-ground-color-primary;
-  display: grid;
-  grid-template-columns: 340px 340px 340px;
+  // display: grid;
+  display: flex;
+  flex-wrap: wrap;
+
+  // grid-template-columns: 340px 340px 340px;
   row-gap: 50px;
   column-gap: 60px;
   overflow: scroll;
   cursor: pointer;
+  @include mobile {
+    justify-content: space-around;
+    background-color: white;
+  }
+
+  @include breakpoint {
+    justify-content: space-around;
+  }
 }
 
 figure {

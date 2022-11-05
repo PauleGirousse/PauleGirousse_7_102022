@@ -4,7 +4,7 @@ import Banner from '../../components/Banner/banner';
 
 function Section() {
   return (
-    <section className="sct">
+    <section className="home_banner">
       <Banner url={Img} />
       <h1>Chez vous, partout et ailleurs</h1>
     </section>

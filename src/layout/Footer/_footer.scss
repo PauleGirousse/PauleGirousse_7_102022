@@ -3,19 +3,28 @@ footer {
   height: 209px;
   color: $text-color-primary;
   background-color: $back-ground-color-secondery;
-  position: relative;
+  // position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   z-index: 2;
   margin-top: 46px;
-  .footer_text {
-    position: absolute;
-    left: 32.15%;
-    right: 32.22%;
-    top: 64.11%;
-    text-align: center;
+  @include mobile {
+    .footer_text {
+      font-size: 12px;
+    }
   }
-  .logo_footer {
-    position: absolute;
-    top: 66px;
-    left: 659px;
-  }
+  // .footer_text {
+  //   position: absolute;
+  //   left: 32.15%;
+  //   right: 32.22%;
+  //   top: 64.11%;
+  //   text-align: center;
+  // }
+  // .logo_footer {
+  //   position: absolute;
+  //   top: 66px;
+  //   left: 659px;
+  // }
 }

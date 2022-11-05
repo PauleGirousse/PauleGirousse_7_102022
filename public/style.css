@@ -10,8 +10,8 @@ html {
 
 body {
   max-width: 1440px;
+  min-width: 375px;
   margin: 0 auto;
-  padding: 0;
   color: #ff6060;
   font-size: 24px;
   font-family: "Montserrat", sans-serif;
@@ -29,9 +29,10 @@ code {
 }
 
 header {
-  width: 1240px;
+  max-width: 1240px;
+  min-width: 335px;
   height: 68px;
-  margin-left: 100px;
+  margin: auto;
   margin-top: 40px;
   color: #ff6060;
   display: flex;
@@ -41,13 +42,14 @@ header {
 }
 header ul {
   height: 34px;
-  width: 309px;
+  max-width: 309px;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   text-align: end;
+  column-gap: 57px;
 }
 header li {
   height: 34px;
@@ -70,11 +72,40 @@ header a {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 792px) {
+  header {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 12px;
+  }
+  header ul {
+    column-gap: 10px;
+  }
+}
+@media screen and (min-width: 793px) and (max-width: 1240px) {
+  header {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  ul {
+    column-gap: 30px;
+  }
+}
 .main {
-  width: 1240px;
-  max-height: 1095px;
-  margin-left: 100px;
-  margin-right: 100px;
+  max-width: 1240px;
+  margin: auto;
+}
+@media screen and (max-width: 792px) {
+  .main {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 793px) and (max-width: 1240px) {
+  .main {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 .error {
@@ -102,9 +133,19 @@ header a {
 }
 
 .logo {
-  width: 210px;
+  max-width: 210px;
   height: 68px;
   position: relative;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 792px) {
+  .logo {
+    max-width: 145px;
+    height: 47px;
+  }
 }
 
 .banner {
@@ -126,9 +167,23 @@ header a {
   border-radius: 25px;
 }
 .banner img {
+  width: 100%;
+  height: 100%;
   border-radius: 25px;
 }
 
+@media screen and (max-width: 792px) {
+  .banner {
+    height: 100%;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 793px) and (max-width: 1240px) {
+  .banner {
+    height: 100%;
+    margin-top: 50px;
+  }
+}
 .picture {
   position: relative;
   width: 1240px;
@@ -162,12 +217,14 @@ header a {
   color: white;
 }
 
-.sct {
+.home_banner {
+  width: 100%;
+  height: 223px;
   position: relative;
 }
-.sct h1 {
-  width: 705px;
-  height: 68px;
+.home_banner h1 {
+  max-width: 705px;
+  min-width: 435px;
   font-weight: 500;
   font-size: 48px;
   color: white;
@@ -178,26 +235,39 @@ header a {
   z-index: 1;
 }
 
+@media screen and (max-width: 792px) {
+  .home_banner {
+    height: 111px;
+  }
+  .home_banner h1 {
+    font-size: 24px;
+    left: 16px;
+    top: 31px;
+    min-width: 0;
+    max-width: 217px;
+  }
+}
+@media screen and (min-width: 793px) and (max-width: 1240px) {
+  .home_banner h1 {
+    left: 16px;
+  }
+}
 footer {
   width: 100%;
   height: 209px;
   color: white;
   background-color: black;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   z-index: 2;
   margin-top: 46px;
 }
-footer .footer_text {
-  position: absolute;
-  left: 32.15%;
-  right: 32.22%;
-  top: 64.11%;
-  text-align: center;
-}
-footer .logo_footer {
-  position: absolute;
-  top: 66px;
-  left: 659px;
+@media screen and (max-width: 792px) {
+  footer .footer_text {
+    font-size: 12px;
+  }
 }
 
 .container_stars {
@@ -212,20 +282,32 @@ footer .logo_footer {
 }
 
 .cards {
-  width: 1240px;
+  width: 100%;
   height: 829px;
   padding-top: 56px;
   padding-left: 50px;
+  padding-right: 50px;
   border-radius: 25px;
   margin-top: 43px;
   padding-bottom: 43px;
   background-color: #f7f7f7;
-  display: grid;
-  grid-template-columns: 340px 340px 340px;
+  display: flex;
+  flex-wrap: wrap;
   row-gap: 50px;
   column-gap: 60px;
   overflow: scroll;
   cursor: pointer;
+}
+@media screen and (max-width: 792px) {
+  .cards {
+    justify-content: space-around;
+    background-color: white;
+  }
+}
+@media screen and (min-width: 793px) and (max-width: 1240px) {
+  .cards {
+    justify-content: space-around;
+  }
 }
 
 figure {
@@ -297,6 +379,11 @@ figure figcaption {
 
 .container_accordions {
   padding: 0 108px;
+}
+@media screen and (max-width: 792px) {
+  .container_accordions {
+    padding: 0;
+  }
 }
 
 .accordion {
@@ -415,6 +502,18 @@ figure figcaption {
   color: white;
   height: 20px;
   font-size: 14px;
+}
+
+.about_banner {
+  width: 100%;
+  height: 223px;
+}
+
+@media screen and (max-width: 792px) {
+  .about_banner {
+    min-width: 335px;
+    height: 255px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

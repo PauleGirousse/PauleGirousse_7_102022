@@ -5,7 +5,12 @@
 }
 //Pour les versions mobiles
 @mixin mobile {
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 792px) {
+    @content;
+  }
+}
+@mixin breakpoint {
+  @media screen and (min-width: 793px) and (max-width: 1240px) {
     @content;
   }
 }

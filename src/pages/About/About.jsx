@@ -1,7 +1,7 @@
 import React from 'react';
-import Banner from '../components/Banner/banner';
-import Img from '../assets/images/IMG_about-banner.png';
-import Accordion from '../components/Accordion/accordion';
+import Banner from '../../components/Banner/banner';
+import Img from '../../assets/images/IMG_about-banner.png';
+import Accordion from '../../components/Accordion/accordion';
 
 export default function About() {
   const accordionData = [
@@ -28,7 +28,9 @@ export default function About() {
   ];
   return (
     <div className="main">
-      <Banner url={Img} />
+      <section className="about_banner">
+        <Banner url={Img} />
+      </section>
       <div className="container_accordions">
         {accordionData.map(({ title, content }) => (
           <Accordion key={title} title={title} content={content} />
