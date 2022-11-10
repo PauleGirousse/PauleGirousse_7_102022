@@ -4,9 +4,9 @@ import Cards from '../../layout/Cards/cards.jsx';
 
 export default function Home() {
   return (
-    <div className="main">
+    <main className="main">
       <Section />
       <Cards />
-    </div>
+    </main>
   );
 }

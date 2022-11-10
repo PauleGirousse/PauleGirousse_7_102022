@@ -8,7 +8,7 @@ const Layout = () => {
   const location = useLocation();
   // console.log(location);
   return (
-    <div>
+    <>
       <header>
         <Logo />
         <nav>
@@ -36,7 +36,7 @@ const Layout = () => {
       </header>
       <Outlet />
       <Footer />
-    </div>
+    </>
   );
 };
 export default Layout;

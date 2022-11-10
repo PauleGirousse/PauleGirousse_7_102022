@@ -43,7 +43,7 @@ function SingleCard() {
   // }
   // if (!foundCard.id) return <Error />;
   return (
-    <div>
+    <>
       {/* {foundCard === []} <Error /> */}
       {/* {error && <Error />}
       {loading && 'Loading...'} */}
@@ -83,7 +83,7 @@ function SingleCard() {
             </div>
           )
         )}
-    </div>
+    </>
   );
 }
 

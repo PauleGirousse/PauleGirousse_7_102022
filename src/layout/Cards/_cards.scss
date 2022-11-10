@@ -1,7 +1,8 @@
 .cards {
   // width: 1240px;
   width: 100%;
-  height: 829px;
+  // height: 100%;
+  // height: 829px;
   padding-top: 56px;
   padding-left: 50px;
   padding-right: 50px;
@@ -16,7 +17,7 @@
   // grid-template-columns: 340px 340px 340px;
   row-gap: 50px;
   column-gap: 60px;
-  overflow: scroll;
+  // overflow: scroll;
   cursor: pointer;
   @include mobile {
     justify-content: space-around;
@@ -25,17 +26,20 @@
     padding: 0;
     margin: 0;
     border-radius: 0;
+    .house_link {
+      width: 100%;
+    }
   }
 
   @include breakpoint {
     justify-content: space-around;
     // background-color: white;
     row-gap: 20px;
+    column-gap: 20px;
     padding: 30px 11px 30px 11px;
-    margin: 0;
+    // margin: 0;
   }
 }
-
 figure {
   width: 340px;
   height: 340px;
@@ -44,7 +48,8 @@ figure {
   border-radius: 10px;
   position: relative;
   @include mobile {
-    width: 335px;
+    // width: 335px;
+    width: 100%;
     height: 255px;
   }
   @include breakpoint {

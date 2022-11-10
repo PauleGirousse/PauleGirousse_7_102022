@@ -35,16 +35,37 @@ export default function About() {
   console.log(vw);
 
   return (
-    <div className="main">
-      <section className="about_banner">
-        {/* <Banner url={Img} />  */}
-        {vw > 792 ? <Banner url={ImgDesktop} /> : <Banner url={ImgMobile} />}
+    <main className="main">
+      <section className="banner">
+        <div className="about_banner">
+          <Banner urlDesktop={ImgDesktop} urlMobile={ImgMobile} />
+        </div>
       </section>
       <div className="container_accordions">
         {accordionData.map(({ title, content }) => (
           <Accordion key={title} title={title} content={content} />
         ))}
       </div>
-    </div>
+    </main>
   );
+}
+{
+  /* {vw > 792 ? <Banner url={ImgDesktop} /> : <Banner url={ImgMobile} />} */
+}
+
+{
+  /* <Banner
+            urlDesktop={ImgDesktop}
+            //  urlMobile={ImgMobile}
+          /> */
+}
+
+{
+  /* <picture>
+              <source media="(min-width:793px)" srcSet={ImgDesktop} />
+    
+              <source media="(max-width:792px)" srcSet={ImgMobile} />
+    
+              <img src={ImgDesktop} />
+            </picture> */
 }

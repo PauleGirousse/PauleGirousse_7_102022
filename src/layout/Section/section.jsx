@@ -1,12 +1,15 @@
 import React from 'react';
-import Img from '../../assets/images/IMG_home-banner.png';
+import ImgDesktop from '../../assets/images/IMG_home-banner.png';
+import ImgMobile from '../../assets/images/home_mobile.png';
 import Banner from '../../components/Banner/banner';
 
 function Section() {
   return (
-    <section className="home_banner">
-      <Banner url={Img} />
-      <h1>Chez vous, partout et ailleurs</h1>
+    <section className="banner">
+      <div className="home_banner">
+        <Banner urlDesktop={ImgDesktop} urlMobile={ImgMobile} />
+        <h1>Chez vous, partout et ailleurs</h1>
+      </div>
     </section>
   );
 }

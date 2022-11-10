@@ -3,7 +3,7 @@ header {
 
   max-width: 1240px;
   min-width: 335px;
-  height: 68px;
+  // height: 68px;
   // margin-left: 100px;
   margin: auto;
   margin-top: 40px;
@@ -59,6 +59,10 @@ header {
     font-size: 12px;
     ul {
       column-gap: 10px;
+      align-items: center;
+    }
+    li {
+      height: 17px;
     }
   }
 }

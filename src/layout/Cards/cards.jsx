@@ -30,17 +30,16 @@ function Cards() {
       });
   }, []);
   return (
-    <div className="cards">
+    <section className="cards">
       {items.map((card) => (
-        <Link to={`house/${card.id}`} key={card.id}>
+        <Link to={`house/${card.id}`} key={card.id} className="house_link">
           <figure>
-            {/* // card={card}> */}
-            <img src={card.cover} alt="appartement "></img>
+            <img src={card.cover} alt="appartement"></img>
             <figcaption>{card.title}</figcaption>
           </figure>
         </Link>
       ))}
-    </div>
+    </section>
   );
 }
 

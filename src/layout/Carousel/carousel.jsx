@@ -41,7 +41,11 @@ function Carousel(props) {
           />
         </div>
       )}
-      <img src={slides[current]} alt="logement" className="image" />
+      <img
+        src={slides[current]}
+        alt="intérieur du logement"
+        className="image"
+      />
     </section>
   );
 }
