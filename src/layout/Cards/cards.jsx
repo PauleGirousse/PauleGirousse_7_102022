@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom';
 // import SingleCard from '../../pages/SingleCard';
 // import useFetch from '../utils/hooks';
 // import Card from '../../components/Card/card';
-export type Cardtype = {
-  id: string;
-  title: string;
-  cover: string;
-};
-type Datatype = Array<Cardtype>;
+// export type Cardtype = {
+//   id: string;
+//   title: string;
+//   cover: string;
+// };
+// type Datatype = Array<Cardtype>;
 
 function Cards() {
-  const [items, setItems] = useState<Datatype>([]);
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
     fetch('datas/logements.json', {

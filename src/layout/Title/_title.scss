@@ -1,5 +1,5 @@
 .container_title {
-  width: 80%;
+  width: 85%;
   //   height: 77px;
   display: flex;
   flex-direction: column;
@@ -7,9 +7,24 @@
   .title {
     height: 51px;
     font-size: 36px;
+    margin: 0;
+    @include mobile {
+      font-size: 18px;
+    }
+    @include breakpoint {
+      font-size: 24px;
+      width: 100%;
+    }
   }
   .location {
     size: 18px;
     height: 26px;
+    @include mobile {
+      font-size: 14px;
+    }
+    @include breakpoint {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
   }
 }

@@ -5,7 +5,20 @@
   flex-direction: row;
   justify-content: space-between;
   column-gap: 10px;
-
+  @include mobile {
+    margin-bottom: 10px;
+    margin-top: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    justify-content: flex-start;
+  }
+  @include breakpoint {
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    justify-content: flex-start;
+  }
   .tag {
     // width: 115px;
     padding-left: 25px;
@@ -22,6 +35,9 @@
       color: $text-color-primary;
       height: 20px;
       font-size: 14px;
+      @include mobile {
+        font-size: 10px;
+      }
     }
   }
 }

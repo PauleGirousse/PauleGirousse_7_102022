@@ -7,6 +7,7 @@ import Stars from '../../layout/Stars/stars';
 // import useFetch from '../../utils/hooks/useFetch';
 import Accordion from '../../components/Accordion/accordion';
 import Tags from '../../layout/Tags/tags';
+import Host from '../../layout/Host/host';
 
 function SingleCard() {
   const location = useLocation();
@@ -36,9 +37,14 @@ function SingleCard() {
   const foundCard = items.filter((card) => card.id === params.id);
   console.log(foundCard);
 
-  if (!foundCard) return;
+  // Si l'identifiant du logement n'est pas valide on renvoie sur la page d'erreur
+  // if (foundCard === []) {
+  //   return <Error />;
+  // }
+  // if (!foundCard.id) return <Error />;
   return (
     <div>
+      {/* {foundCard === []} <Error /> */}
       {/* {error && <Error />}
       {loading && 'Loading...'} */}
       {foundCard &&
@@ -54,23 +60,14 @@ function SingleCard() {
             tags,
           }) => (
             <div className="main" key={foundCard.id}>
-              <Carousel key={foundCard.id} pictures={pictures} />
+              <Carousel pictures={pictures} />
               <section className="details">
-                <Title
-                  key={foundCard.title}
-                  title={title}
-                  location={location}
-                />
-                <div className="container_host">
-                  <div className="name">
-                    <span>{host.name}</span>
-                  </div>
-                  <div className="circle"></div>
-                </div>
+                <Title title={title} location={location} />
+                <Host host={host} />
                 <Tags tags={tags} />
                 <Stars rating={rating} />
               </section>
-              <div className="container_accordion">
+              <div className="container_accordion_singleCard">
                 <Accordion title="Description" content={description} />
                 <Accordion
                   title="Equipements"
@@ -191,13 +188,26 @@ export default SingleCard;
 {
   /* <div className="container_tags">
    <div className="tag">
-    <span>Cosy</span>
+   <span>Cosy</span>
+   </div>
+   <div className="tag">
+   <span>Canal</span>
   </div>
   <div className="tag">
-    <span>Canal</span>
+  <span>Paris 10</span>
   </div>
-  <div className="tag">
-    <span>Paris 10</span>
+  </div>  */
+}
+
+{
+  /* <div className="container_host"> */
+}
+{
+  /* <div className="name">
+    <span>{host.name}</span>
   </div>
-</div>  */
+  <div className="circle"></div> */
+}
+{
+  /* </div> */
 }

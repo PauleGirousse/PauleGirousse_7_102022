@@ -1,6 +1,8 @@
 import React from 'react';
 import Banner from '../../components/Banner/banner';
-import Img from '../../assets/images/IMG_about-banner.png';
+// import Img from '../../assets/images/IMG_about-banner.png';
+import ImgMobile from '../../assets/images/about_mobile.png';
+import ImgDesktop from '../../assets/images/IMG_about-banner.png';
 import Accordion from '../../components/Accordion/accordion';
 
 export default function About() {
@@ -26,10 +28,17 @@ export default function About() {
         "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.",
     },
   ];
+  const vw = Math.max(
+    document.documentElement.clientWidth || 0,
+    window.innerWidth || 0
+  );
+  console.log(vw);
+
   return (
     <div className="main">
       <section className="about_banner">
-        <Banner url={Img} />
+        {/* <Banner url={Img} />  */}
+        {vw > 792 ? <Banner url={ImgDesktop} /> : <Banner url={ImgMobile} />}
       </section>
       <div className="container_accordions">
         {accordionData.map(({ title, content }) => (

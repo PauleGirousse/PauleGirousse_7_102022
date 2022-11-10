@@ -21,19 +21,23 @@
 @include mobile {
   .home_banner {
     height: 111px;
+    margin-bottom: 20px;
     h1 {
       font-size: 24px;
       left: 16px;
       top: 31px;
       min-width: 0;
-      max-width: 217px;
+      // max-width: 217px;
     }
   }
 }
 @include breakpoint {
-  .home_banner h1 {
-    // font-size: 24px;
-    left: 16px;
-    // top: 31px;
+  .home_banner {
+    margin-bottom: 40px;
+    h1 {
+      // font-size: 24px;
+      left: 16px;
+      // top: 31px;
+    }
   }
 }

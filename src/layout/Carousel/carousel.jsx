@@ -19,7 +19,7 @@ function Carousel(props) {
   }
 
   return (
-    <section className="picture">
+    <section className="carousel">
       {slides.length === 1 ? (
         ''
       ) : (

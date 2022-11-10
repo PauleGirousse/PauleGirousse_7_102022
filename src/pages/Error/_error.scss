@@ -11,10 +11,20 @@
     height: 263px;
     font-weight: 700;
     font-size: 288px;
+    margin-top: 277px;
+    @include mobile {
+      font-size: 96px;
+      height: 99px;
+    }
   }
   .notFound {
     font-weight: 500;
     font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 182px;
+    @include mobile {
+      font-size: 18px;
+    }
   }
   .return {
     font-weight: 500;
