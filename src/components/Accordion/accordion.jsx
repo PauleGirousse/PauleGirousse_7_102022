@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import Open_icon from '../../assets/icons/up.svg';
 import Closed_icon from '../../assets/icons/down.svg';
 
@@ -21,6 +22,10 @@ const Accordion = ({ title, content }) => {
       {isActive && <div className="accordion_content">{content}</div>}
     </div>
   );
+};
+Accordion.PropTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string,
 };
 export default Accordion;
 

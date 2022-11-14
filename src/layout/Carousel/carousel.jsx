@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import LeftArrow from '../../assets/icons/leftArrow.svg';
 import RightArrow from '../../assets/icons/rightArrow.svg';
 
@@ -49,7 +50,9 @@ function Carousel(props) {
     </section>
   );
 }
-
+Carousel.PropTypes = {
+  pictures: PropTypes.string,
+};
 export default Carousel;
 
 //   const [items, setItems] = useState([{}]);

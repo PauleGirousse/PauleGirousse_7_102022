@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Title(props) {
   return (
@@ -12,5 +13,8 @@ function Title(props) {
     </div>
   );
 }
-
+Title.PropTypes = {
+  title: PropTypes.string,
+  location: PropTypes.string,
+};
 export default Title;

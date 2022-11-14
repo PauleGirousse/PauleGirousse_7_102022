@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Tags(props) {
   const tags = props.tags;
@@ -12,5 +13,7 @@ function Tags(props) {
     </div>
   );
 }
-
+Tags.PropTypes = {
+  tags: PropTypes.string,
+};
 export default Tags;

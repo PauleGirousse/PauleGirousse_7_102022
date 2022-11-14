@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
-// import Error from '../Error/Error';
+import Error from '../Error/Error';
 import Carousel from '../../layout/Carousel/carousel';
 import Title from '../../layout/Title/title';
 import Stars from '../../layout/Stars/stars';
@@ -38,10 +38,10 @@ function SingleCard() {
   console.log(foundCard);
 
   // Si l'identifiant du logement n'est pas valide on renvoie sur la page d'erreur
-  // if (foundCard === []) {
-  //   return <Error />;
-  // }
-  // if (!foundCard.id) return <Error />;
+  if (foundCard.length === 0) {
+    return <Error />;
+  }
+
   return (
     <>
       {/* {foundCard === []} <Error /> */}

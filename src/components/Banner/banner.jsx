@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Banner(props) {
   return (
@@ -20,6 +21,10 @@ function Banner(props) {
     </picture>
   );
 }
+Banner.PropTypes = {
+  srcSet: PropTypes.string,
+  src: PropTypes.string,
+};
 export default Banner;
 
 // import Img1 from '../../assets/images/IMGHome-banner.png';

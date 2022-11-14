@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Star from '../../assets/icons/star.svg';
 import StarGrey from '../../assets/icons/star-grey.svg';
 
@@ -19,7 +20,9 @@ function Stars(props) {
     </div>
   );
 }
-
+Stars.PropTypes = {
+  rating: PropTypes.number,
+};
 export default Stars;
 // function ChoiseColor({ rating }) {
 //   switch (rating) {

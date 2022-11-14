@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 // import SingleCard from '../../pages/SingleCard';
 // import useFetch from '../utils/hooks';
@@ -42,7 +43,11 @@ function Cards() {
     </section>
   );
 }
-
+Cards.PropTypes = {
+  id: PropTypes.string.isRequired,
+  cover: PropTypes.string,
+  title: PropTypes.string,
+};
 export default Cards;
 
 // <Card key={id} card={card} />
