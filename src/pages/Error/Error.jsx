@@ -5,7 +5,7 @@ export default function Error() {
     <div className="error">
       <div className="error-number">404</div>
       <span className="notFound">
-        Oups! La page que vous demandez n'existe pas.
+        Oups ! La page que vous demandez n'existe pas.
       </span>
       <p className="return">Retourner sur la page d’accueil</p>
     </div>

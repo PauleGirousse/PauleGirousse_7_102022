@@ -10,15 +10,16 @@
   margin-top: 43px;
   padding-bottom: 43px;
   background-color: $back-ground-color-primary;
-  // display: grid;
   display: flex;
   flex-wrap: wrap;
-
-  // grid-template-columns: 340px 340px 340px;
   row-gap: 50px;
   column-gap: 60px;
-  // overflow: scroll;
-  cursor: pointer;
+  .house_link {
+    border-radius: 10px;
+    &:hover {
+      box-shadow: 2px 2px 10px $text-color-base;
+    }
+  }
   @include mobile {
     justify-content: space-around;
     background-color: white;
@@ -44,7 +45,6 @@ figure {
   width: 340px;
   height: 340px;
   margin: 0;
-
   border-radius: 10px;
   position: relative;
   @include mobile {
@@ -89,4 +89,8 @@ figure {
       bottom: 15px;
     }
   }
+}
+.loading {
+  color: $text-color-base;
+  margin: auto;
 }

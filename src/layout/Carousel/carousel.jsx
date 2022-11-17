@@ -45,13 +45,14 @@ function Carousel(props) {
       <img
         src={slides[current]}
         alt="intérieur du logement"
-        className="image"
+        // className="image"
+        className={slides[current] ? 'img-active' : 'img-passive'}
       />
     </section>
   );
 }
-Carousel.PropTypes = {
-  pictures: PropTypes.string,
+Carousel.propTypes = {
+  pictures: PropTypes.array,
 };
 export default Carousel;
 

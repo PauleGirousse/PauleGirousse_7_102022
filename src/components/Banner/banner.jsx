@@ -1,38 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Banner(props) {
+// function Banner(props) {
+
+const Banner = ({ urlDesktop, urlMobile }) => {
   return (
-    // <div className="banner">
-    //   <img src={props.url} alt="paysage" />
-    // </div>
     <picture>
       <source
         media="(min-width:793px)"
-        srcSet={props.urlDesktop}
+        srcSet={urlDesktop}
         alt="paysage"
       ></source>
       <source
         media="(max-width:792px)"
-        srcSet={props.urlMobile}
+        srcSet={urlMobile}
         alt="paysage"
       ></source>
-      <img src={props.urlDesktop} alt="paysage" />
+      <img src={urlDesktop} alt="paysage" />
     </picture>
   );
-}
-Banner.PropTypes = {
-  srcSet: PropTypes.string,
-  src: PropTypes.string,
+};
+Banner.propTypes = {
+  urlDesktop: PropTypes.string,
+  urlMobile: PropTypes.string,
 };
 export default Banner;
-
-// import Img1 from '../../assets/images/IMGHome-banner.png';
-// {
-//   /* <img src={Img2} className="IMG_about" alt="paysage" /> */
-// }
-// import Img2 from '../../assets/images/IMGabout.png';
-
-// <picture className='banner'>
-//   <source media="(min-width:1000px)" srcSet=""
-// </picture>

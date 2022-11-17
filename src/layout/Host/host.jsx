@@ -5,9 +5,10 @@ function Host(props) {
   return (
     <div className="container_host">
       <div className="name">
-        <span>{props.host.name}</span>
+        <span key={props.host.name}>{props.host.name}</span>
       </div>
       <img
+        key={props.host.picture}
         src={props.host.picture}
         alt="visage de l'hébergeur"
         className="circle"
@@ -15,8 +16,9 @@ function Host(props) {
     </div>
   );
 }
-Host.PropTypes = {
+Host.propTypes = {
   name: PropTypes.string,
   picture: PropTypes.string,
 };
+
 export default Host;

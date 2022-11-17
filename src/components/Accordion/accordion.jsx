@@ -23,9 +23,10 @@ const Accordion = ({ title, content }) => {
     </div>
   );
 };
-Accordion.PropTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
+Accordion.propTypes = {
+  title: PropTypes.string,
+
+  content: PropTypes.node,
 };
 export default Accordion;
 

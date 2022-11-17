@@ -3,7 +3,7 @@ import ImgDesktop from '../../assets/images/IMG_home-banner.png';
 import ImgMobile from '../../assets/images/home_mobile.png';
 import Banner from '../../components/Banner/banner';
 
-function Section() {
+export default function Section() {
   return (
     <section className="banner">
       <div className="home_banner">
@@ -14,4 +14,4 @@ function Section() {
   );
 }
 
-export default Section;
+//  Section;

@@ -7,6 +7,11 @@
     position: absolute;
     top: 35%;
     left: 23px;
+    cursor: pointer;
+
+    &:active {
+      background-color: $text-color-base;
+    }
     @include mobile {
       width: 12px;
       height: 20px;
@@ -17,20 +22,33 @@
     position: absolute;
     top: 35%;
     right: 23px;
+    cursor: pointer;
+
+    &:active {
+      background-color: $text-color-base;
+    }
     @include mobile {
       width: 12px;
       height: 20px;
       top: 50%;
     }
   }
-  // .no-active {
-  //   color: transparent;
-  // }
-  .image {
+  .img-passive {
+    opacity: 0;
+    // transition: 200ms opacity ease-in-out;
+    // transition-delay: 200ms;
+    // transform: translate(-50%);
+    // transition: all 5s ease;
+  }
+  .img-active {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 25px;
+    opacity: 1;
+    // transform: translateX(10%);
+    // transition-delay: 0ms;
+
     @include mobile {
       border-radius: 10px;
     }

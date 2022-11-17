@@ -13,7 +13,7 @@ function Title(props) {
     </div>
   );
 }
-Title.PropTypes = {
+Title.propTypes = {
   title: PropTypes.string,
   location: PropTypes.string,
 };

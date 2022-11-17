@@ -20,8 +20,8 @@ function Stars(props) {
     </div>
   );
 }
-Stars.PropTypes = {
-  rating: PropTypes.number,
+Stars.propTypes = {
+  rating: PropTypes.string,
 };
 export default Stars;
 // function ChoiseColor({ rating }) {

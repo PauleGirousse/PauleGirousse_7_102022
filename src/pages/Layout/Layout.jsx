@@ -1,11 +1,11 @@
 import React from 'react';
 import { Outlet, NavLink } from 'react-router-dom';
 import Logo from '../../components/Logo/logo';
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 import Footer from '../../layout/Footer/Footer';
 
 const Layout = () => {
-  const location = useLocation();
+  // const location = useLocation();
   // console.log(location);
   return (
     <>
@@ -16,8 +16,12 @@ const Layout = () => {
             <li>
               <NavLink
                 to="/"
+                end
                 className={(nav) =>
-                  nav.isActive && location.pathname === '/' ? 'nav-active' : ''
+                  nav.isActive
+                    ? // && location.pathname === '/'
+                      'nav-active'
+                    : ''
                 }
               >
                 Accueil
