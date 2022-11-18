@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 // import { useFetch } from '../../utils/hooks/useFetch';
 import Error from '../Error/Error';
@@ -120,6 +120,16 @@ function SingleCard() {
   const [foundCard, setFoundCard] = useState();
   const [isDataLoading, setDataLoading] = useState(false);
   const [error, setError] = useState(false);
+  // const { data, isLoading, error } = useFetch('../datas/logements.json', {
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //     Accept: 'application/json',
+  //   },
+  // });
+  // setItems(data);
+  // const items = data;
+  // console.log(items);
+  // setFoundCard(card);
   useEffect(() => {
     async function fetchData() {
       setDataLoading(true);
@@ -146,13 +156,14 @@ function SingleCard() {
     }
     fetchData();
   }, []);
+
+  // const foundCard = items.filter((card) => card.id === params.id);
+  // console.log(foundCard);
   if (error) {
     return <Error />;
   }
   return (
     <>
-      {/* {error && <Error />}
-      { {loading && 'Loading...'}  */}
       {isDataLoading ? (
         <span className="loading">Loading...</span>
       ) : !foundCard || foundCard.length === 0 ? (

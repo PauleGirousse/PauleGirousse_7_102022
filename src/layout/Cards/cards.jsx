@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { useFetch } from '../../utils/hooks/useFetch';
@@ -56,34 +56,34 @@ function Cards() {
   const items = data;
   console.log(items);
 
-  if (error) {
-    <Error />;
-  }
   // const [items, setItems] = useState([]);
   // const [isDataLoading, setDataLoading] = useState(false);
   // const [error, setError] = useState();
 
-  useEffect(() => {
-    // async function fetchData() {
-    //   setDataLoading(true);
-    //   try {
-    //     const response = await fetch('datas/logements.json', {
-    //       headers: {
-    //         'Content-Type': 'application/json',
-    //         Accept: 'application/json',
-    //       },
-    //     });
-    //     const items = await response.json();
-    //     setItems(items);
-    //   } catch (error) {
-    //     console.log(error);
-    //     setError(true);
-    //   } finally {
-    //     setDataLoading(false);
-    //   }
-    // }
-    // fetchData();
-  }, []);
+  // useEffect(() => {
+  // async function fetchData() {
+  //   setDataLoading(true);
+  //   try {
+  //     const response = await fetch('datas/logements.json', {
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //         Accept: 'application/json',
+  //       },
+  //     });
+  //     const items = await response.json();
+  //     setItems(items);
+  //   } catch (error) {
+  //     console.log(error);
+  //     setError(true);
+  //   } finally {
+  //     setDataLoading(false);
+  //   }
+  // }
+  // fetchData();
+  // }, []);
+  if (error) {
+    <Error />;
+  }
   return (
     <section className="cards">
       {isLoading ? (

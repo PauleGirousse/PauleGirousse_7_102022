@@ -10,10 +10,12 @@
     top: 0;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
     background: black;
     opacity: 30%;
     border-radius: 25px;
+    @include mobile {
+      border-radius: 10px;
+    }
   }
   picture,
   img,
@@ -21,6 +23,9 @@
     width: 100%;
     height: 100%;
     border-radius: 25px;
+    @include mobile {
+      border-radius: 10px;
+    }
   }
 }
 
@@ -28,6 +33,7 @@
   .banner {
     height: 100%;
     margin-top: 0;
+    border-radius: 10px;
   }
 }
 @include breakpoint {
