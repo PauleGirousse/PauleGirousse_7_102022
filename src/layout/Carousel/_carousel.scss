@@ -8,13 +8,15 @@
   }
   .left-arrow {
     position: absolute;
-    // top: 35%;
     left: 23px;
     cursor: pointer;
+    z-index: 10;
     top: 50%;
     transform: translateY(-50%);
 
-    &:active {
+    &:hover,
+    :active {
+      border-radius: 10px;
       background-color: $text-color-base;
     }
     @include mobile {
@@ -25,12 +27,14 @@
   }
   .right-arrow {
     position: absolute;
-    // top: 35%;
     right: 23px;
     cursor: pointer;
+    z-index: 10;
     top: 50%;
     transform: translateY(-50%);
-    &:active {
+    &:hover,
+    :active {
+      border-radius: 10px;
       background-color: $text-color-base;
     }
     @include mobile {
@@ -41,10 +45,8 @@
   }
   .img-passive {
     opacity: 0;
-    // transition: 200ms opacity ease-in-out;
-    // transition-delay: 200ms;
-    // transform: translate(-50%);
-    // transition: all 5s ease;
+    // animation: disparition 3s ease-in-out;
+    // transition-duration: 1s ease;
   }
   .img-active {
     width: 100%;
@@ -52,8 +54,8 @@
     object-fit: cover;
     border-radius: 25px;
     opacity: 1;
-    // transform: translateX(10%);
-    // transition-delay: 0ms;
+    // transition-duration: 1s ease;
+    // animation: apparition 3s ease-in-out;
 
     @include mobile {
       border-radius: 10px;

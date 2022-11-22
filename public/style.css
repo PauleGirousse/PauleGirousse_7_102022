@@ -327,9 +327,6 @@ body {
   color: #ff6060;
   font-size: 24px;
   font-family: "Montserrat", sans-serif;
-  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -341,8 +338,6 @@ body {
 
 code {
   font-family: "Montserrat", sans-serif;
-  /* font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace; */
 }
 
 header {
@@ -471,6 +466,7 @@ header a {
 .error .return {
   font-weight: 500;
   font-size: 18px;
+  color: #ff6060;
   text-decoration-line: underline;
   margin-bottom: 113px;
 }
@@ -508,10 +504,14 @@ header a {
   top: 0;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
   background: black;
   opacity: 30%;
   border-radius: 25px;
+}
+@media screen and (max-width: 792px) {
+  .banner::after {
+    border-radius: 10px;
+  }
 }
 .banner picture,
 .banner img,
@@ -520,11 +520,19 @@ header a {
   height: 100%;
   border-radius: 25px;
 }
+@media screen and (max-width: 792px) {
+  .banner picture,
+.banner img,
+.banner source {
+    border-radius: 10px;
+  }
+}
 
 @media screen and (max-width: 792px) {
   .banner {
     height: 100%;
     margin-top: 0;
+    border-radius: 10px;
   }
 }
 @media screen and (min-width: 793px) and (max-width: 1280px) {
@@ -538,36 +546,49 @@ header a {
   height: 415px;
   margin-top: 25px;
 }
+@media screen and (max-width: 792px) {
+  .carousel {
+    height: 255px;
+  }
+}
 .carousel .left-arrow {
   position: absolute;
-  top: 35%;
   left: 23px;
   cursor: pointer;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.carousel .left-arrow:active {
+.carousel .left-arrow:hover,
+.carousel .left-arrow :active {
+  border-radius: 10px;
   background-color: #ff6060;
 }
 @media screen and (max-width: 792px) {
   .carousel .left-arrow {
     width: 12px;
     height: 20px;
-    top: 50%;
+    left: 5px;
   }
 }
 .carousel .right-arrow {
   position: absolute;
-  top: 35%;
   right: 23px;
   cursor: pointer;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.carousel .right-arrow:active {
+.carousel .right-arrow:hover,
+.carousel .right-arrow :active {
+  border-radius: 10px;
   background-color: #ff6060;
 }
 @media screen and (max-width: 792px) {
   .carousel .right-arrow {
     width: 12px;
     height: 20px;
-    top: 50%;
+    right: 5px;
   }
 }
 .carousel .img-passive {
@@ -605,6 +626,7 @@ header a {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 25px;
 }
 .home_banner h1 {
   max-width: 705px;
@@ -625,8 +647,9 @@ header a {
   }
   .home_banner h1 {
     font-size: 24px;
-    padding-left: 16px;
+    padding: 0 16px;
     min-width: 0;
+    min-width: unset;
   }
 }
 @media screen and (min-width: 793px) and (max-width: 1280px) {
@@ -777,36 +800,49 @@ figure figcaption {
   height: 415px;
   margin-top: 25px;
 }
+@media screen and (max-width: 792px) {
+  .carousel {
+    height: 255px;
+  }
+}
 .carousel .left-arrow {
   position: absolute;
-  top: 35%;
   left: 23px;
   cursor: pointer;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.carousel .left-arrow:active {
+.carousel .left-arrow:hover,
+.carousel .left-arrow :active {
+  border-radius: 10px;
   background-color: #ff6060;
 }
 @media screen and (max-width: 792px) {
   .carousel .left-arrow {
     width: 12px;
     height: 20px;
-    top: 50%;
+    left: 5px;
   }
 }
 .carousel .right-arrow {
   position: absolute;
-  top: 35%;
   right: 23px;
   cursor: pointer;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.carousel .right-arrow:active {
+.carousel .right-arrow:hover,
+.carousel .right-arrow :active {
+  border-radius: 10px;
   background-color: #ff6060;
 }
 @media screen and (max-width: 792px) {
   .carousel .right-arrow {
     width: 12px;
     height: 20px;
-    top: 50%;
+    right: 5px;
   }
 }
 .carousel .img-passive {

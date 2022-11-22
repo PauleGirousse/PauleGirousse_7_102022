@@ -36,6 +36,7 @@
   .return {
     font-weight: 500;
     font-size: 18px;
+    color: $text-color-base;
     text-decoration-line: underline;
     margin-bottom: 113px;
     @include mobile {

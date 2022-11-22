@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default function Error() {
   return (
@@ -7,7 +8,9 @@ export default function Error() {
       <span className="notFound">
         Oups ! La page que vous demandez n'existe pas.
       </span>
-      <p className="return">Retourner sur la page d’accueil</p>
+      <NavLink to="/" className="return">
+        Retourner sur la page d’accueil
+      </NavLink>
     </div>
   );
 }

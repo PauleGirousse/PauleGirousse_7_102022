@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useParams, useLocation } from 'react-router-dom';
-// import { useFetch } from '../../utils/hooks/useFetch';
+import { useFetch } from '../../utils/hooks/useFetch';
 import Error from '../Error/Error';
 import Carousel from '../../layout/Carousel/carousel';
 import Title from '../../layout/Title/title';
@@ -8,6 +8,68 @@ import Stars from '../../layout/Stars/stars';
 import Accordion from '../../components/Accordion/accordion';
 import Tags from '../../layout/Tags/tags';
 import Host from '../../layout/Host/host';
+
+function SingleCard() {
+  const location = useLocation();
+  console.log(location.pathname);
+  const params = useParams();
+  console.log(params.id);
+
+  const { data, isLoading } = useFetch('../datas/logements.json', []);
+
+  console.log(data);
+
+  const foundCard = data?.filter((card) => card.id === params.id);
+  console.log(foundCard);
+
+  return (
+    <>
+      {isLoading ? (
+        <span className="loading">Loading...</span>
+      ) : !foundCard || foundCard.length === 0 ? (
+        <Error />
+      ) : (
+        foundCard &&
+        foundCard.map(
+          ({
+            title,
+            pictures,
+            description,
+            host,
+            rating,
+            location,
+            equipments,
+            tags,
+          }) => (
+            <div className="main" key={foundCard}>
+              <Carousel pictures={pictures} />
+              <section className="details">
+                <Title title={title} location={location} />
+                <Host host={host} />
+                <Tags tags={tags} />
+                <Stars rating={rating} />
+              </section>
+              <div className="container_accordion_singleCard">
+                <Accordion title="Description" content={description} />
+                <Accordion
+                  title="Equipements"
+                  content={
+                    <ul>
+                      {equipments.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  }
+                />
+              </div>
+            </div>
+          )
+        )
+      )}
+    </>
+  );
+}
+export default SingleCard;
 
 // function SingleCard() {
 //   const location = useLocation();
@@ -109,104 +171,46 @@ import Host from '../../layout/Host/host';
 // }
 
 // export default SingleCard;
+// console.log(items);
+// setFoundCard(card);
+// useEffect(() => {
+//   async function fetchData() {
+//     setDataLoading(true);
+//     try {
+//       const response = await fetch('../datas/logements.json', {
+//         headers: {
+//           'Content-Type': 'application/json',
+//           Accept: 'application/json',
+//         },
+//       });
+//       const items = await response.json();
+//       // setItems(items);
+//       console.log(items);
+//       const card = items.filter((card) => card.id === params.id);
+//       console.log(card);
+//       setFoundCard(card);
+//       console.log(foundCard);
+//     } catch (err) {
+//       console.log(err);
+//       setError(true);
+//     } finally {
+//       setDataLoading(false);
+//     }
+//   }
+//   fetchData();
+// }, []);
 
-function SingleCard() {
-  const location = useLocation();
-  console.log(location.pathname);
-  const params = useParams();
-  console.log(params.id);
-
-  const [items, setItems] = useState([]);
-  const [foundCard, setFoundCard] = useState();
-  const [isDataLoading, setDataLoading] = useState(false);
-  const [error, setError] = useState(false);
-  // const { data, isLoading, error } = useFetch('../datas/logements.json', {
-  //   headers: {
-  //     'Content-Type': 'application/json',
-  //     Accept: 'application/json',
-  //   },
-  // });
-  // setItems(data);
-  // const items = data;
-  // console.log(items);
-  // setFoundCard(card);
-  useEffect(() => {
-    async function fetchData() {
-      setDataLoading(true);
-      try {
-        const response = await fetch('../datas/logements.json', {
-          headers: {
-            'Content-Type': 'application/json',
-            Accept: 'application/json',
-          },
-        });
-        const items = await response.json();
-        setItems(items);
-        console.log(items);
-        const card = items.filter((card) => card.id === params.id);
-        console.log(card);
-        setFoundCard(card);
-        console.log(foundCard);
-      } catch (err) {
-        console.log(err);
-        setError(true);
-      } finally {
-        setDataLoading(false);
-      }
-    }
-    fetchData();
-  }, []);
-
-  // const foundCard = items.filter((card) => card.id === params.id);
-  // console.log(foundCard);
-  if (error) {
-    return <Error />;
-  }
-  return (
-    <>
-      {isDataLoading ? (
-        <span className="loading">Loading...</span>
-      ) : !foundCard || foundCard.length === 0 ? (
-        <Error />
-      ) : (
-        foundCard &&
-        foundCard.map(
-          ({
-            title,
-            pictures,
-            description,
-            host,
-            rating,
-            location,
-            equipments,
-            tags,
-          }) => (
-            <div className="main" key={foundCard}>
-              <Carousel pictures={pictures} />
-              <section className="details">
-                <Title title={title} location={location} />
-                <Host host={host} />
-                <Tags tags={tags} />
-                <Stars rating={rating} />
-              </section>
-              <div className="container_accordion_singleCard">
-                <Accordion title="Description" content={description} />
-                <Accordion
-                  title="Equipements"
-                  content={
-                    <ul>
-                      {equipments.map((item) => (
-                        <li key={item}>{item}</li>
-                      ))}
-                    </ul>
-                  }
-                />
-              </div>
-            </div>
-          )
-        )
-      )}
-    </>
-  );
-}
-export default SingleCard;
+// const [items, setItems] = useState([]);
+// const [foundCard, setFoundCard] = useState();
+// const [isDataLoading, setDataLoading] = useState(false);
+// const [error, setError] = useState(false);
+// const { data, isLoading, error } = useFetch(
+//   '../datas/logements.json',
+//   {
+//     headers: {
+//       'Content-Type': 'application/json',
+//       Accept: 'application/json',
+//     },
+//   },
+//   [null]
+// );

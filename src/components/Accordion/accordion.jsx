@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import Open_icon from '../../assets/icons/up.svg';
-import Closed_icon from '../../assets/icons/down.svg';
+import Open_icon from '../../assets/icons/upArrow.svg';
+import Closed_icon from '../../assets/icons/downArrow.svg';
 
 const Accordion = ({ title, content }) => {
   const [isActive, setIsActive] = useState(false);

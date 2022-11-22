@@ -15,6 +15,7 @@ function Carousel(props) {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
   console.log(current);
+
   if (!Array.isArray(slides) || slides.length <= 0) {
     return null;
   }
@@ -42,12 +43,14 @@ function Carousel(props) {
           />
         </div>
       )}
+      {/* <div className={slides[current] ? 'img-active' : 'img-passive'}> */}
       <img
         src={slides[current]}
         alt="intérieur du logement"
-        // className="image"
         className={slides[current] ? 'img-active' : 'img-passive'}
+        // className="image"
       />
+      {/* </div> */}
     </section>
   );
 }

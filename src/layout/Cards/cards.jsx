@@ -47,12 +47,15 @@ import Error from '../../pages/Error/Error';
 // export default Cards;
 
 function Cards() {
-  const { data, isLoading, error } = useFetch('datas/logements.json', {
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-    },
-  });
+  const { data, isLoading, error } = useFetch(
+    'datas/logements.json'
+    // , {
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     Accept: 'application/json',
+    //   },
+    // }
+  );
   const items = data;
   console.log(items);
 
@@ -89,7 +92,7 @@ function Cards() {
       {isLoading ? (
         <span className="loading">Loading...</span>
       ) : (
-        // items &&
+        items &&
         items.map((card) => (
           <Link to={`house/${card.id}`} key={card.id} className="house_link">
             <figure>

@@ -1,7 +1,7 @@
 // import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './pages/Layout/Layout';
+import Navigation from './pages/Layout/Layout';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 
@@ -14,7 +14,7 @@ function App() {
       <Router>
         <Routes>
           {/* route de mise en page contenant la navigation commune à toutes les pages */}
-          <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Navigation />}>
             {/* Défini la route par défaut avec index*/}
             <Route index element={<Home />} />
             <Route path="About" element={<About />} />

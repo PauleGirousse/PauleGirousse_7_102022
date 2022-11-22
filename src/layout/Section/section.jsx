@@ -1,6 +1,6 @@
 import React from 'react';
 import ImgDesktop from '../../assets/images/IMG_home-banner.png';
-import ImgMobile from '../../assets/images/home_mobile.png';
+import ImgMobile from '../../assets/images/IMG_home_mobile.png';
 import Banner from '../../components/Banner/banner';
 
 export default function Section() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from '../../components/Banner/banner';
 // import Img from '../../assets/images/IMG_about-banner.png';
-import ImgMobile from '../../assets/images/about_mobile.png';
+import ImgMobile from '../../assets/images/IMG_about_mobile.png';
 import ImgDesktop from '../../assets/images/IMG_about-banner.png';
 import Accordion from '../../components/Accordion/accordion';
 

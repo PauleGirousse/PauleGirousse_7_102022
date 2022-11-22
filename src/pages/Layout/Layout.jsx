@@ -4,7 +4,7 @@ import Logo from '../../components/Logo/logo';
 // import { useLocation } from 'react-router-dom';
 import Footer from '../../layout/Footer/Footer';
 
-const Layout = () => {
+const Navigation = () => {
   // const location = useLocation();
   // console.log(location);
   return (
@@ -43,4 +43,4 @@ const Layout = () => {
     </>
   );
 };
-export default Layout;
+export default Navigation;
