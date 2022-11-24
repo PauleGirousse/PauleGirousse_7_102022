@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Host(props) {
+function Host({ host }) {
   return (
     <div className="container_host">
       <div className="name">
-        <span key={props.host.name}>{props.host.name}</span>
+        <span key={host.name}>{host.name}</span>
       </div>
       <img
-        key={props.host.picture}
-        src={props.host.picture}
+        key={host.picture}
+        src={host.picture}
         alt="visage de l'hébergeur"
         className="circle"
       ></img>

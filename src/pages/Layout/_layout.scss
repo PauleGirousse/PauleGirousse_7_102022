@@ -1,32 +1,46 @@
 header {
-  // min-height: 100vh;
-
   max-width: 1240px;
   min-width: 335px;
-  // height: 68px;
-  // margin-left: 100px;
-  margin: auto;
-  margin-top: 40px;
   color: $text-color-base;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin: auto;
+  margin-top: 40px;
+  @include breakpoint {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  @include mobile {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 12px;
+  }
   ul {
-    height: 34px;
     max-width: 309px;
-    margin: 0;
-    padding: 0;
+    height: 34px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     text-align: end;
     column-gap: 57px;
+    margin: 0;
+    padding: 0;
+    @include breakpoint {
+      column-gap: 30px;
+    }
+    @include mobile {
+      column-gap: 10px;
+      align-items: center;
+    }
   }
-
   li {
     height: 34px;
     list-style-type: none;
+    @include mobile {
+      height: 17px;
+    }
   }
   .home {
     width: 136px;
@@ -34,44 +48,13 @@ header {
   .about {
     width: 116px;
   }
-
   a {
     color: $text-color-base;
-    border-bottom: 2px solid transparent;
     text-decoration: none;
+    border-bottom: 2px solid transparent;
   }
 }
-// .activeLink {
-//   border-bottom: 2px solid $back-ground-color-base;
-// }
-
 .nav-active {
   position: relative;
   text-decoration: underline;
-}
-// @include mobile {
-
-// }
-@include mobile {
-  header {
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 12px;
-    ul {
-      column-gap: 10px;
-      align-items: center;
-    }
-    li {
-      height: 17px;
-    }
-  }
-}
-@include breakpoint {
-  header {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  ul {
-    column-gap: 30px;
-  }
 }

@@ -5,9 +5,9 @@
   text-align: right;
   margin-bottom: 30px;
   .name {
-    font-size: 18px;
     width: 93px;
     height: 52px;
+    font-size: 18px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,9 +20,9 @@
 .circle {
   width: 64px;
   height: 64px;
-  margin-left: 10px;
-  border-radius: 50%;
   background-color: $back-ground-color-tertiary;
+  border-radius: 50%;
+  margin-left: 10px;
   @include mobile {
     width: 32px;
     height: 32px;

@@ -24,29 +24,7 @@ const Accordion = ({ title, content }) => {
   );
 };
 Accordion.propTypes = {
-  title: PropTypes.string,
-
+  title: PropTypes.string.isRequired,
   content: PropTypes.node,
 };
 export default Accordion;
-
-// function Accordion({ title, content }) {
-//   const [active, setActive] = useState(false);
-
-//   const handleToggle = (e) => {
-//     setActive(!active);
-//   };
-//   return (
-//     <div className={`accordion" ${active && 'active'}`}>
-//       <div className="accordion_title" onClick={handleToggle}>
-//         {title}
-//         <div className="accordion_icon">
-//           {active ? { open_icon } : { closed_icon }}
-//         </div>
-//       </div>
-//       <div className="accordion_content">{content}</div>
-//     </div>
-//   );
-// }
-
-// export default Accordion;

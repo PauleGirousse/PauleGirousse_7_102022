@@ -1,28 +1,25 @@
 .container_tags {
-  margin-top: 20px;
-  margin-bottom: 24px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   column-gap: 10px;
-  @include mobile {
-    margin-bottom: 10px;
-    margin-top: 0;
-    width: 100%;
-    flex-wrap: wrap;
-    row-gap: 10px;
-    justify-content: flex-start;
-  }
+  margin-top: 20px;
+  margin-bottom: 24px;
   @include breakpoint {
     width: 100%;
     flex-wrap: wrap;
     row-gap: 10px;
     justify-content: flex-start;
   }
+  @include mobile {
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
   .tag {
-    // width: 115px;
-    padding-left: 25px;
-    padding-right: 25px;
     height: 25px;
     background-color: $text-color-base;
     border-radius: 10px;
@@ -30,11 +27,11 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-
+    padding-left: 25px;
+    padding-right: 25px;
     span {
-      color: $text-color-primary;
-      // height: 20px;
       font-size: 14px;
+      color: $text-color-primary;
       @include mobile {
         font-size: 10px;
       }

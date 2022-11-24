@@ -1,12 +1,9 @@
 import React from 'react';
 import { Outlet, NavLink } from 'react-router-dom';
-import Logo from '../../components/Logo/logo';
-// import { useLocation } from 'react-router-dom';
+import Logo from '../../layout/Logo/logo';
 import Footer from '../../layout/Footer/Footer';
 
-const Navigation = () => {
-  // const location = useLocation();
-  // console.log(location);
+const Layout = () => {
   return (
     <>
       <header>
@@ -17,12 +14,7 @@ const Navigation = () => {
               <NavLink
                 to="/"
                 end
-                className={(nav) =>
-                  nav.isActive
-                    ? // && location.pathname === '/'
-                      'nav-active'
-                    : ''
-                }
+                className={(nav) => (nav.isActive ? 'nav-active' : '')}
               >
                 Accueil
               </NavLink>
@@ -43,4 +35,4 @@ const Navigation = () => {
     </>
   );
 };
-export default Navigation;
+export default Layout;

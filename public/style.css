@@ -343,28 +343,57 @@ code {
 header {
   max-width: 1240px;
   min-width: 335px;
-  margin: auto;
-  margin-top: 40px;
   color: #ff6060;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin: auto;
+  margin-top: 40px;
+}
+@media screen and (min-width: 793px) and (max-width: 1280px) {
+  header {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 792px) {
+  header {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 12px;
+  }
 }
 header ul {
-  height: 34px;
   max-width: 309px;
-  margin: 0;
-  padding: 0;
+  height: 34px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   text-align: end;
   column-gap: 57px;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 793px) and (max-width: 1280px) {
+  header ul {
+    column-gap: 30px;
+  }
+}
+@media screen and (max-width: 792px) {
+  header ul {
+    column-gap: 10px;
+    align-items: center;
+  }
 }
 header li {
   height: 34px;
   list-style-type: none;
+}
+@media screen and (max-width: 792px) {
+  header li {
+    height: 17px;
+  }
 }
 header .home {
   width: 136px;
@@ -374,8 +403,8 @@ header .about {
 }
 header a {
   color: #ff6060;
-  border-bottom: 2px solid transparent;
   text-decoration: none;
+  border-bottom: 2px solid transparent;
 }
 
 .nav-active {
@@ -383,40 +412,17 @@ header a {
   text-decoration: underline;
 }
 
-@media screen and (max-width: 792px) {
-  header {
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 12px;
-  }
-  header ul {
-    column-gap: 10px;
-    align-items: center;
-  }
-  header li {
-    height: 17px;
-  }
-}
-@media screen and (min-width: 793px) and (max-width: 1280px) {
-  header {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  ul {
-    column-gap: 30px;
-  }
-}
 .main {
   max-width: 1240px;
   margin: auto;
 }
-@media screen and (max-width: 792px) {
+@media screen and (min-width: 793px) and (max-width: 1280px) {
   .main {
     margin-left: 20px;
     margin-right: 20px;
   }
 }
-@media screen and (min-width: 793px) and (max-width: 1280px) {
+@media screen and (max-width: 792px) {
   .main {
     margin-left: 20px;
     margin-right: 20px;
@@ -424,11 +430,11 @@ header a {
 }
 
 .error {
+  color: #ff6060;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: #ff6060;
   margin-top: 169px;
 }
 @media screen and (max-width: 792px) {
@@ -437,7 +443,6 @@ header a {
   }
 }
 .error .error-number {
-  width: 597px;
   height: 288px;
   font-weight: 700;
   font-size: 288px;
@@ -445,8 +450,8 @@ header a {
 }
 @media screen and (max-width: 792px) {
   .error .error-number {
-    font-size: 96px;
     height: 99px;
+    font-size: 96px;
     margin-bottom: 11px;
   }
 }
@@ -499,11 +504,11 @@ header a {
 }
 .banner::after {
   content: "";
+  width: 100%;
+  height: 100%;
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
   background: black;
   opacity: 30%;
   border-radius: 25px;
@@ -531,8 +536,8 @@ header a {
 @media screen and (max-width: 792px) {
   .banner {
     height: 100%;
-    margin-top: 0;
     border-radius: 10px;
+    margin-top: 0;
   }
 }
 @media screen and (min-width: 793px) and (max-width: 1280px) {
@@ -541,9 +546,9 @@ header a {
   }
 }
 .carousel {
-  position: relative;
   width: 100%;
   height: 415px;
+  position: relative;
   margin-top: 25px;
 }
 @media screen and (max-width: 792px) {
@@ -558,16 +563,17 @@ header a {
   z-index: 10;
   top: 50%;
   transform: translateY(-50%);
+  padding: 5px;
 }
 .carousel .left-arrow:hover,
 .carousel .left-arrow :active {
-  border-radius: 10px;
   background-color: #ff6060;
+  border-radius: 10px;
 }
 @media screen and (max-width: 792px) {
   .carousel .left-arrow {
-    width: 12px;
-    height: 20px;
+    width: 22px;
+    height: 30px;
     left: 5px;
   }
 }
@@ -578,6 +584,7 @@ header a {
   z-index: 10;
   top: 50%;
   transform: translateY(-50%);
+  padding: 5px;
 }
 .carousel .right-arrow:hover,
 .carousel .right-arrow :active {
@@ -586,33 +593,29 @@ header a {
 }
 @media screen and (max-width: 792px) {
   .carousel .right-arrow {
-    width: 12px;
-    height: 20px;
+    width: 22px;
+    height: 30px;
     right: 5px;
   }
 }
-.carousel .img-passive {
-  opacity: 0;
-}
-.carousel .img-active {
+.carousel .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 25px;
-  opacity: 1;
 }
 @media screen and (max-width: 792px) {
-  .carousel .img-active {
+  .carousel .image {
     border-radius: 10px;
   }
 }
 .carousel .pagination {
-  position: absolute;
   font-size: 18px;
   font-weight: 500;
+  color: white;
+  position: absolute;
   bottom: 25px;
   left: 50%;
-  color: white;
 }
 @media screen and (max-width: 792px) {
   .carousel .pagination {
@@ -623,10 +626,17 @@ header a {
 .home_banner {
   height: 100%;
   margin-top: 63px;
+  border-radius: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 25px;
+}
+@media screen and (max-width: 792px) {
+  .home_banner {
+    height: 111px;
+    margin-bottom: 20px;
+    margin-top: 16px;
+  }
 }
 .home_banner h1 {
   max-width: 705px;
@@ -634,29 +644,23 @@ header a {
   font-weight: 500;
   font-size: 48px;
   color: white;
-  margin: auto;
   position: absolute;
   z-index: 1;
-}
-
-@media screen and (max-width: 792px) {
-  .home_banner {
-    height: 111px;
-    margin-bottom: 20px;
-    margin-top: 16px;
-  }
-  .home_banner h1 {
-    font-size: 24px;
-    padding: 0 16px;
-    min-width: 0;
-    min-width: unset;
-  }
+  margin: auto;
 }
 @media screen and (min-width: 793px) and (max-width: 1280px) {
-  .home_banner {
+  .home_banner h1 {
     margin-bottom: 40px;
   }
 }
+@media screen and (max-width: 792px) {
+  .home_banner h1 {
+    min-width: unset;
+    font-size: 24px;
+    padding: 0 16px;
+  }
+}
+
 footer {
   width: 100%;
   height: 209px;
@@ -699,17 +703,17 @@ footer {
 
 .cards {
   width: 100%;
-  padding-top: 56px;
-  padding-left: 50px;
-  padding-right: 50px;
-  border-radius: 25px;
-  margin-top: 43px;
-  padding-bottom: 43px;
   background-color: #f7f7f7;
+  border-radius: 25px;
   display: flex;
   flex-wrap: wrap;
   row-gap: 50px;
   column-gap: 60px;
+  padding-top: 56px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 43px;
+  padding-bottom: 43px;
 }
 .cards .house_link {
   border-radius: 10px;
@@ -719,12 +723,12 @@ footer {
 }
 @media screen and (max-width: 792px) {
   .cards {
-    justify-content: space-around;
     background-color: white;
+    border-radius: 0;
+    justify-content: space-around;
     row-gap: 20px;
     padding: 0;
     margin: 0;
-    border-radius: 0;
   }
   .cards .house_link {
     width: 100%;
@@ -742,9 +746,9 @@ footer {
 figure {
   width: 340px;
   height: 340px;
-  margin: 0;
   border-radius: 10px;
   position: relative;
+  margin: 0;
 }
 @media screen and (max-width: 792px) {
   figure {
@@ -760,13 +764,13 @@ figure {
 }
 figure::after {
   content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  border-radius: 10px;
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
 }
 figure img {
   width: 100%;
@@ -776,12 +780,12 @@ figure img {
 }
 figure figcaption {
   width: 300px;
-  color: white;
   font-size: 18px;
-  margin-left: 20px;
+  color: white;
   position: absolute;
   bottom: 20px;
   z-index: 1;
+  margin-left: 20px;
 }
 @media screen and (max-width: 792px) {
   figure figcaption {
@@ -795,9 +799,9 @@ figure figcaption {
 }
 
 .carousel {
-  position: relative;
   width: 100%;
   height: 415px;
+  position: relative;
   margin-top: 25px;
 }
 @media screen and (max-width: 792px) {
@@ -812,16 +816,17 @@ figure figcaption {
   z-index: 10;
   top: 50%;
   transform: translateY(-50%);
+  padding: 5px;
 }
 .carousel .left-arrow:hover,
 .carousel .left-arrow :active {
-  border-radius: 10px;
   background-color: #ff6060;
+  border-radius: 10px;
 }
 @media screen and (max-width: 792px) {
   .carousel .left-arrow {
-    width: 12px;
-    height: 20px;
+    width: 22px;
+    height: 30px;
     left: 5px;
   }
 }
@@ -832,6 +837,7 @@ figure figcaption {
   z-index: 10;
   top: 50%;
   transform: translateY(-50%);
+  padding: 5px;
 }
 .carousel .right-arrow:hover,
 .carousel .right-arrow :active {
@@ -840,33 +846,29 @@ figure figcaption {
 }
 @media screen and (max-width: 792px) {
   .carousel .right-arrow {
-    width: 12px;
-    height: 20px;
+    width: 22px;
+    height: 30px;
     right: 5px;
   }
 }
-.carousel .img-passive {
-  opacity: 0;
-}
-.carousel .img-active {
+.carousel .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 25px;
-  opacity: 1;
 }
 @media screen and (max-width: 792px) {
-  .carousel .img-active {
+  .carousel .image {
     border-radius: 10px;
   }
 }
 .carousel .pagination {
-  position: absolute;
   font-size: 18px;
   font-weight: 500;
+  color: white;
+  position: absolute;
   bottom: 25px;
   left: 50%;
-  color: white;
 }
 @media screen and (max-width: 792px) {
   .carousel .pagination {
@@ -884,8 +886,8 @@ figure figcaption {
 }
 
 .accordion {
-  margin-top: 33px;
   width: 100%;
+  margin-top: 33px;
 }
 @media screen and (max-width: 792px) {
   .accordion {
@@ -896,20 +898,20 @@ figure figcaption {
   width: 100%;
   height: 47px;
   font-weight: 500;
-  border-radius: 5px;
-  background-color: #ff6060;
   color: white;
+  background-color: #ff6060;
+  border-radius: 5px;
+  padding-left: 18.08px;
+  padding-right: 16.08px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 18.08px;
-  padding-right: 16.08px;
 }
 @media screen and (max-width: 792px) {
   .accordion .accordion_title {
-    font-weight: 400;
     height: 30px;
+    font-weight: 400;
   }
   .accordion .accordion_title .icon {
     width: 9px;
@@ -920,8 +922,8 @@ figure figcaption {
   width: 100%;
   color: #ff6060;
   background-color: #f7f7f7;
-  padding: 36px 27px 19px 18px;
   border-radius: 5px;
+  padding: 36px 27px 19px 18px;
 }
 @media screen and (max-width: 792px) {
   .accordion .accordion_content {
@@ -936,28 +938,24 @@ figure figcaption {
 }
 .container_title .title {
   height: 51px;
+  font-weight: 500;
   font-size: 36px;
   margin: 0;
+}
+@media screen and (min-width: 793px) and (max-width: 1280px) {
+  .container_title .title {
+    width: 100%;
+    font-size: 24px;
+  }
 }
 @media screen and (max-width: 792px) {
   .container_title .title {
     font-size: 18px;
   }
 }
-@media screen and (min-width: 793px) and (max-width: 1280px) {
-  .container_title .title {
-    font-size: 24px;
-    width: 100%;
-  }
-}
 .container_title .location {
-  size: 18px;
   height: 26px;
-}
-@media screen and (max-width: 792px) {
-  .container_title .location {
-    font-size: 14px;
-  }
+  size: 18px;
 }
 @media screen and (min-width: 793px) and (max-width: 1280px) {
   .container_title .location {
@@ -965,21 +963,26 @@ figure figcaption {
     margin-bottom: 10px;
   }
 }
+@media screen and (max-width: 792px) {
+  .container_title .location {
+    font-size: 14px;
+  }
+}
 
 .details {
+  font-weight: 500;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  font-weight: 500;
   margin-top: 30px;
 }
-@media screen and (max-width: 792px) {
+@media screen and (min-width: 793px) and (max-width: 1280px) {
   .details .container_host:nth-child(2) {
     order: 3;
   }
 }
-@media screen and (min-width: 793px) and (max-width: 1280px) {
+@media screen and (max-width: 792px) {
   .details .container_host:nth-child(2) {
     order: 3;
   }
@@ -1018,22 +1021,12 @@ figure figcaption {
 }
 
 .container_tags {
-  margin-top: 20px;
-  margin-bottom: 24px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   column-gap: 10px;
-}
-@media screen and (max-width: 792px) {
-  .container_tags {
-    margin-bottom: 10px;
-    margin-top: 0;
-    width: 100%;
-    flex-wrap: wrap;
-    row-gap: 10px;
-    justify-content: flex-start;
-  }
+  margin-top: 20px;
+  margin-bottom: 24px;
 }
 @media screen and (min-width: 793px) and (max-width: 1280px) {
   .container_tags {
@@ -1043,9 +1036,17 @@ figure figcaption {
     justify-content: flex-start;
   }
 }
+@media screen and (max-width: 792px) {
+  .container_tags {
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+}
 .container_tags .tag {
-  padding-left: 25px;
-  padding-right: 25px;
   height: 25px;
   background-color: #ff6060;
   border-radius: 10px;
@@ -1053,10 +1054,12 @@ figure figcaption {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 .container_tags .tag span {
-  color: white;
   font-size: 14px;
+  color: white;
 }
 @media screen and (max-width: 792px) {
   .container_tags .tag span {
@@ -1070,9 +1073,9 @@ figure figcaption {
 }
 @media screen and (max-width: 792px) {
   .about_banner {
-    margin-top: 17px;
     min-width: 335px;
     height: 255px;
+    margin-top: 17px;
   }
 }
 
@@ -1084,9 +1087,9 @@ figure figcaption {
   margin-bottom: 30px;
 }
 .container_host .name {
-  font-size: 18px;
   width: 93px;
   height: 52px;
+  font-size: 18px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1101,9 +1104,9 @@ figure figcaption {
 .circle {
   width: 64px;
   height: 64px;
-  margin-left: 10px;
-  border-radius: 50%;
   background-color: #c4c4c4;
+  border-radius: 50%;
+  margin-left: 10px;
 }
 @media screen and (max-width: 792px) {
   .circle {

@@ -1,6 +1,5 @@
 import React from 'react';
 import Banner from '../../components/Banner/banner';
-// import Img from '../../assets/images/IMG_about-banner.png';
 import ImgMobile from '../../assets/images/IMG_about_mobile.png';
 import ImgDesktop from '../../assets/images/IMG_about-banner.png';
 import Accordion from '../../components/Accordion/accordion';
@@ -28,11 +27,6 @@ export default function About() {
         "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.",
     },
   ];
-  const vw = Math.max(
-    document.documentElement.clientWidth || 0,
-    window.innerWidth || 0
-  );
-  console.log(vw);
 
   return (
     <main className="main">
@@ -48,24 +42,4 @@ export default function About() {
       </div>
     </main>
   );
-}
-{
-  /* {vw > 792 ? <Banner url={ImgDesktop} /> : <Banner url={ImgMobile} />} */
-}
-
-{
-  /* <Banner
-            urlDesktop={ImgDesktop}
-            //  urlMobile={ImgMobile}
-          /> */
-}
-
-{
-  /* <picture>
-              <source media="(min-width:793px)" srcSet={ImgDesktop} />
-    
-              <source media="(max-width:792px)" srcSet={ImgMobile} />
-    
-              <img src={ImgDesktop} />
-            </picture> */
 }

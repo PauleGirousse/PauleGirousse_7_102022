@@ -1,32 +1,13 @@
-@mixin flex_row {
-  display: flex;
-  flex-direction: row;
-  //   flex-wrap: wrap;
-}
 //Pour les versions mobiles
 @mixin mobile {
   @media screen and (max-width: 792px) {
     @content;
   }
 }
+
+// Pour les versions tablettes
 @mixin breakpoint {
   @media screen and (min-width: 793px) and (max-width: 1280px) {
     @content;
   }
 }
-// @keyframes apparition {
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
-// @keyframes disparition {
-//   from {
-//     opacity: 1;
-//   }
-//   to {
-//     opacity: 0;
-//   }
-// }

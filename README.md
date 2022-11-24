@@ -1,13 +1,14 @@
-                        Projet KASA
+    Projet KASA    🛠 Outils et contraintes techniques ⚙
 
-🛠 Outils et contraintes techniques ⚙
-🛠 Outils standards
+🛠 Outils standards :
 ● Create React App
 ● React Router
 ● Styling: L’utilisation de Sass est optionnelle. CSS est à utiliser par
 défaut.
 ● Pas de librairie React externe
-⚙ Contraintes techniques
+
+⚙ Contraintes techniques :
+
 React :
 Il est impératif d’utiliser ces éléments de React pour un code de qualité :
 ● Découpage en composants modulaires et réutilisables ;
@@ -29,12 +30,12 @@ pour récupérer les informations de chaque logement.
 valeur présente dans l’URL ne fait pas partie des données
 renseignées.
 ● La logique du routeur est réunie dans un seul fichier.
+
 Général :
 ● Le code ne doit pas produire d'erreur ou de warning dans la console.
 
-Pour utiliser Sass :
-
-                 npm run sass
+Pour utiliser Sass
+npm run sass
 
 # Getting Started with Create React App
 

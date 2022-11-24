@@ -1,23 +1,22 @@
 .error {
+  color: $text-color-base;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: $text-color-base;
   margin-top: 169px;
   @include mobile {
     margin-top: 195px;
   }
 
   .error-number {
-    width: 597px;
     height: 288px;
     font-weight: 700;
     font-size: 288px;
     margin-bottom: 66px;
     @include mobile {
-      font-size: 96px;
       height: 99px;
+      font-size: 96px;
       margin-bottom: 11px;
     }
   }
@@ -28,7 +27,6 @@
     margin-bottom: 182px;
     @include mobile {
       width: 260px;
-
       font-size: 18px;
       margin-bottom: 133px;
     }

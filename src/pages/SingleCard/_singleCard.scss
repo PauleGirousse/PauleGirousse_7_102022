@@ -1,18 +1,16 @@
 .details {
+  font-weight: 500;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  font-weight: 500;
   margin-top: 30px;
-  // margin-left: 100px;
-  // margin-right: 100px;
-  @include mobile {
+  @include breakpoint {
     .container_host:nth-child(2) {
       order: 3;
     }
   }
-  @include breakpoint {
+  @include mobile {
     .container_host:nth-child(2) {
       order: 3;
     }
@@ -21,7 +19,6 @@
 .container_accordion_singleCard {
   display: flex;
   flex-direction: row;
-  // width: 1240px;
   column-gap: 76px;
   @include mobile {
     flex-direction: column;

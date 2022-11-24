@@ -1,14 +1,11 @@
 .main {
   max-width: 1240px;
-  // max-height: 1095px;
   margin: auto;
-  // margin-left: 100px;
-  // margin-right: 100px;
-  @include mobile {
+  @include breakpoint {
     margin-left: 20px;
     margin-right: 20px;
   }
-  @include breakpoint {
+  @include mobile {
     margin-left: 20px;
     margin-right: 20px;
   }
