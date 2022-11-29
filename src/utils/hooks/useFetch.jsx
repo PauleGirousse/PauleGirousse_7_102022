@@ -23,7 +23,7 @@ export function useFetch(url, initialValue) {
 
         setData(data);
       } catch (err) {
-        console.log(err);
+        console.log('erreur ici', err);
         setError(true);
       } finally {
         setLoading(false);

@@ -949,7 +949,7 @@ figure figcaption {
 }
 .container_title .location {
   height: 26px;
-  size: 18px;
+  font-size: 18px;
 }
 @media screen and (min-width: 793px) and (max-width: 1280px) {
   .container_title .location {

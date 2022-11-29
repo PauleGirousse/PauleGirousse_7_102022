@@ -17,7 +17,7 @@
   }
   .location {
     height: 26px;
-    size: 18px;
+    font-size: 18px;
     @include breakpoint {
       font-size: 14px;
       margin-bottom: 10px;
