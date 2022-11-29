@@ -32,7 +32,7 @@ function SingleCard() {
             equipments,
             tags,
           }) => (
-            <div className="main" key={foundCard}>
+            <main key={foundCard}>
               <Carousel pictures={pictures} />
               <section className="details">
                 <Title title={title} location={location} />
@@ -53,7 +53,7 @@ function SingleCard() {
                   }
                 />
               </div>
-            </div>
+            </main>
           )
         )
       )}

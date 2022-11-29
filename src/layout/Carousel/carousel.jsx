@@ -23,7 +23,7 @@ function Carousel({ pictures }) {
       {slides.length === 1 ? (
         ''
       ) : (
-        <div>
+        <>
           <div className="pagination">
             {current + 1}/{slides.length}
           </div>
@@ -39,7 +39,7 @@ function Carousel({ pictures }) {
             className="right-arrow"
             onClick={nextSlide}
           />
-        </div>
+        </>
       )}
       <img
         src={slides[current]}

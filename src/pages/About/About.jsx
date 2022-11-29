@@ -29,7 +29,7 @@ export default function About() {
   ];
 
   return (
-    <main className="main">
+    <main>
       <section className="banner">
         <div className="about_banner">
           <Banner urlDesktop={ImgDesktop} urlMobile={ImgMobile} />
